@@ -11,7 +11,7 @@ public class Board : MonoBehaviour
     [Space(20)]
     public GameObject[] gems;
     
-    private TileBackground[,] allTiles;
+    //private TileBackground[,] allTiles;
     public GameObject[,] allGems;
 
 
