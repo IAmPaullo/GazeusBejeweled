@@ -152,8 +152,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 8
   height: 8
-  tilePrefab: {fileID: 1298177532446110539, guid: 7e2ea79e12e48ad44bff064f8b9179e9,
+  tilePrefab: {fileID: 6024788507561549505, guid: 7e2ea79e12e48ad44bff064f8b9179e9,
     type: 3}
+  gems:
+  - {fileID: 8570098508834561388, guid: e1eda939893037c4c9c89f5e689329a5, type: 3}
+  - {fileID: 1714577051104103311, guid: 3efe53a631ed8b24db0ba68a10260286, type: 3}
+  - {fileID: 9053780038720511119, guid: 5af2ca4799077e4428ff53a18c6c9c23, type: 3}
+  - {fileID: 7924791282247160904, guid: 361944f52f3f9344c8d4afa0e9304e4a, type: 3}
+  - {fileID: 4373592020323914714, guid: 0ee52f86da7bd944398f0e939f11403b, type: 3}
 --- !u!4 &312203001
 Transform:
   m_ObjectHideFlags: 0
@@ -204,7 +210,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.14595942, g: 0.14789763, b: 0.1509434, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
