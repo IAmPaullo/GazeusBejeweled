@@ -37,6 +37,16 @@ public class Board : MonoBehaviour
                 bgTile.name = "(" + i + "," + j + ")";
                 //Instanciando as jóias
                 int gemsAvailable = Random.Range(0, gems.Length);
+
+                //check por segurança, depois ver o quão pesado tá esse loop
+                int maxLoop = 0;
+                while (BetterDetectMatchesBoard(i, j, gems[gemsAvailable]) && maxLoop < 100) 
+                {
+                    gemsAvailable = Random.Range(0, gems.Length);
+                    maxLoop++;
+                }
+                maxLoop = 0;
+
                 GameObject gem = Instantiate(gems[gemsAvailable], tmpPstn, Quaternion.identity, this.transform);
                 gem.name = "(" + i + "," + j + ")";
                 allGems[i, j] = gem;
@@ -44,4 +54,105 @@ public class Board : MonoBehaviour
             }
         }
     }
+    private bool MatchesAtBoard(int column, int row, GameObject gemPiece)
+    {
+        if(column > 1 && row > 1)
+        {
+            if(allGems[column -1, row].tag == gemPiece.tag && 
+                allGems[column - 2, row].tag == gemPiece.tag)
+            {
+                return true;
+            }
+            if (allGems[column, row - 1].tag == gemPiece.tag &&
+                allGems[column , row - 2].tag == gemPiece.tag)
+            {
+                return true;
+            }
+        }else if(column <= 1 || row <= 1)
+        {
+            if(row > 1)
+            {
+                if(allGems[column, row - 1].tag == gemPiece.tag && allGems[column, row - 2].tag == gemPiece.tag)
+                {
+                    return true;
+                }
+            }
+            if (column > 1)
+            {
+                if (allGems[column - 1, row].tag == gemPiece.tag && allGems[column - 2, row].tag == gemPiece.tag)
+                {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+
+
+    private bool BetterDetectMatchesBoard(int column, int row, GameObject gemPiece)
+    {
+        if (column > 1)          //!!! split these into two so it checks them correctly (row vs column)
+
+        {
+
+            //if the pieces to my left (already generated) are both of the same type as me then ...
+
+            if (allGems[column - 1, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag && 
+                allGems[column - 2, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag)
+
+            {
+
+                return true;
+
+            }
+
+        }
+
+
+
+        if (row > 1)
+
+        {
+
+            //if the pieces below me (already generated) are both of the same type as me then ...
+
+            if (allGems[column, row - 1].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag && 
+                allGems[column, row - 2].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag)
+
+            {
+
+                return true;
+
+            }
+
+        }
+
+        return false;
+    }
+
+    private void DestroyMatchLocation(int column, int row)
+    {
+        if(allGems[column, row].GetComponent<GemManager>().isMatched)
+        {
+            Destroy(allGems[column, row]);
+            allGems[column, row] = null;
+        }
+    }
+
+    public void DestroyActualMatches()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if(allGems[i, j] != null)
+                {
+                    DestroyMatchLocation(i, j);
+                }
+            }
+        }
+    }
+
+
 }

@@ -120,7 +120,7 @@ public class GemManager : MonoBehaviour
             sideGem.GetComponent<GemManager>().row -= 1;
             row += 1;
         }
-        else if (swipeAngle > -45 && swipeAngle >= -135 && row > 0)
+        else if (swipeAngle < -45 && swipeAngle >= -135 && row > 0)
         {
             //Arrastando pra baixo
             sideGem = board.allGems[column, row - 1 ];
@@ -138,11 +138,15 @@ public class GemManager : MonoBehaviour
         {
             GameObject leftGem1 = board.allGems[column - 1, row];
             GameObject rightGem1 = board.allGems[column + 1, row];
-            if(leftGem1.tag == this.gameObject.tag && rightGem1.gameObject.tag == this.gameObject.tag)
+            if(leftGem1 != null && leftGem1 != null)
             {
-                leftGem1.GetComponent<GemManager>().isMatched = true;
-                rightGem1.GetComponent<GemManager>().isMatched = true;
-                isMatched = true;
+                if(leftGem1.tag == this.gameObject.tag && rightGem1.gameObject.tag == this.gameObject.tag)
+                {
+                    leftGem1.GetComponent<GemManager>().isMatched = true;
+                    rightGem1.GetComponent<GemManager>().isMatched = true;
+                    isMatched = true;
+                }
+
             }
 
         }
@@ -151,14 +155,16 @@ public class GemManager : MonoBehaviour
         if (row > 0 && row < board.height - 1)
         {
             GameObject upGem1 = board.allGems[column, row + 1];
-            GameObject downtGem1 = board.allGems[column, row - 1];
-            if (upGem1.tag == this.gameObject.tag && downtGem1.gameObject.tag == this.gameObject.tag)
+            GameObject downGem1 = board.allGems[column, row - 1];
+            if (upGem1 != null && downGem1 != null)
             {
-                upGem1.GetComponent<GemManager>().isMatched = true;
-                downtGem1.GetComponent<GemManager>().isMatched = true;
-                isMatched = true;
+                if (upGem1.tag == this.gameObject.tag && downGem1.gameObject.tag == this.gameObject.tag)
+                {
+                    upGem1.GetComponent<GemManager>().isMatched = true;
+                    downGem1.GetComponent<GemManager>().isMatched = true;
+                    isMatched = true;
+                }
             }
-
         }
     }
 
@@ -184,8 +190,13 @@ public class GemManager : MonoBehaviour
                 row = prevRow;
                 column = prevColumn;
             }
+            else
+            {
+                board.DestroyActualMatches();
+            }
             sideGem = null;
         }
+        
     }
 
 
