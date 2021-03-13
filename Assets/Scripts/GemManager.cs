@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class GemManager : MonoBehaviour
 {
-
+    [Header("Variaveis do Board")]
     public int column;
     public int row;
-    [Space(10)]
+    public int prevColumn;
+    public int prevRow;
     public int targetX;
     public int targetY;
-    
+    public bool isMatched;
+    public float checkMoveTime;
+
+    [Space(10)]
     private Board board;
     private GameObject sideGem;
     private Vector2 frstTchPstn;
@@ -18,6 +22,7 @@ public class GemManager : MonoBehaviour
     private Vector2 tmpPstn;
     [Space(10)]
     public float swipeAngle;
+    public float swipeDiff = 1f;
     public float offsetMove;
 
 
@@ -30,12 +35,16 @@ public class GemManager : MonoBehaviour
         targetY = (int)transform.position.y;
         row = targetY;
         column = targetX;
+        prevRow = row;
+        prevColumn = column;
 
     }
 
     
     void Update()
     {
+        DetectMatch();
+        ChangeColor();
         targetX = column;
         targetY = row;
         if(Mathf.Abs(targetX - transform.position.x) > .1f)
@@ -78,14 +87,19 @@ public class GemManager : MonoBehaviour
 
     void MathFunctions()
     {
+        if(Mathf.Abs(lstTchPstn.y - frstTchPstn.y) > swipeDiff || Mathf.Abs(lstTchPstn.x - frstTchPstn.x) > swipeDiff)
+        {
+
         //angulo da direção que foi arrastado
         swipeAngle = Mathf.Atan2(lstTchPstn.y - frstTchPstn.y, lstTchPstn.x - frstTchPstn.x) * 180 / Mathf.PI;
         MoveGems();
+        }
     }
 
     void MoveGems()
     {
-        if(swipeAngle > -45 && swipeAngle <= 45 && column < board.width)
+        
+        if(swipeAngle > -45 && swipeAngle <= 45 && column < board.width - 1)
         {
             //Arrastando pra direita
             sideGem = board.allGems[column + 1, row ];
@@ -99,7 +113,7 @@ public class GemManager : MonoBehaviour
             sideGem.GetComponent<GemManager>().column += 1;
             column -= 1;
         }
-        else if (swipeAngle > 45 && swipeAngle <= 135 && row < board.height)
+        else if (swipeAngle > 45 && swipeAngle <= 135 && row < board.height - 1)
         {
             //Arrastando pra cima
             sideGem = board.allGems[column , row + 1];
@@ -113,7 +127,67 @@ public class GemManager : MonoBehaviour
             sideGem.GetComponent<GemManager>().row += 1;
             row -= 1;
         }
-        
+        StartCoroutine(CheckMovePossibilities());
     }
+
+
+    void DetectMatch()
+    {
+        //Detecção Horizontal
+        if(column > 0 && column < board.width - 1)
+        {
+            GameObject leftGem1 = board.allGems[column - 1, row];
+            GameObject rightGem1 = board.allGems[column + 1, row];
+            if(leftGem1.tag == this.gameObject.tag && rightGem1.gameObject.tag == this.gameObject.tag)
+            {
+                leftGem1.GetComponent<GemManager>().isMatched = true;
+                rightGem1.GetComponent<GemManager>().isMatched = true;
+                isMatched = true;
+            }
+
+        }
+
+        //Detecção Vertical
+        if (row > 0 && row < board.height - 1)
+        {
+            GameObject upGem1 = board.allGems[column, row + 1];
+            GameObject downtGem1 = board.allGems[column, row - 1];
+            if (upGem1.tag == this.gameObject.tag && downtGem1.gameObject.tag == this.gameObject.tag)
+            {
+                upGem1.GetComponent<GemManager>().isMatched = true;
+                downtGem1.GetComponent<GemManager>().isMatched = true;
+                isMatched = true;
+            }
+
+        }
+    }
+
+    void ChangeColor ()
+    {
+        if (isMatched)
+        {
+            SpriteRenderer gemSprite = GetComponent<SpriteRenderer>();
+            gemSprite.color = new Color(1, 1, 1, .2f);
+        }
+    }
+
+
+    public IEnumerator CheckMovePossibilities()
+    {
+        yield return new WaitForSeconds(checkMoveTime);
+        if(sideGem != null)
+        {
+            if(!isMatched && !sideGem.GetComponent<GemManager>().isMatched)
+            {
+                sideGem.GetComponent<GemManager>().row = row;
+                sideGem.GetComponent<GemManager>().column = column;
+                row = prevRow;
+                column = prevColumn;
+            }
+            sideGem = null;
+        }
+    }
+
+
 
 }

@@ -155,11 +155,11 @@ MonoBehaviour:
   tilePrefab: {fileID: 6024788507561549505, guid: 7e2ea79e12e48ad44bff064f8b9179e9,
     type: 3}
   gems:
-  - {fileID: 8570098508834561388, guid: e1eda939893037c4c9c89f5e689329a5, type: 3}
-  - {fileID: 1714577051104103311, guid: 3efe53a631ed8b24db0ba68a10260286, type: 3}
-  - {fileID: 9053780038720511119, guid: 5af2ca4799077e4428ff53a18c6c9c23, type: 3}
-  - {fileID: 7924791282247160904, guid: 361944f52f3f9344c8d4afa0e9304e4a, type: 3}
-  - {fileID: 4373592020323914714, guid: 0ee52f86da7bd944398f0e939f11403b, type: 3}
+  - {fileID: 1866082592458488333, guid: 6dc3c2b6753d6974b83abb2e8207f299, type: 3}
+  - {fileID: 2889890171818194786, guid: d3b237c7a5ee1b546aac7fd5799b5570, type: 3}
+  - {fileID: 1201142854907456410, guid: 7c584ea4ce370fd4f9d5091bf0cad420, type: 3}
+  - {fileID: 1913579700810535344, guid: a01998eee9d8b604db0c115315b9a45f, type: 3}
+  - {fileID: 8646125056632562528, guid: 9b7e6f406a267a74d9693f950857fe37, type: 3}
 --- !u!4 &312203001
 Transform:
   m_ObjectHideFlags: 0
