@@ -16,6 +16,7 @@ public class GemManager : MonoBehaviour
     public float canMoveTime;
 
     [Space(10)]
+    private MatchHandler matchHandler;
     private Board board;
     private GameObject sideGem;
     private Vector2 frstTchPstn;
@@ -31,6 +32,7 @@ public class GemManager : MonoBehaviour
     
     void Start()
     {
+        matchHandler = FindObjectOfType<MatchHandler>();
         board = FindObjectOfType<Board>();
         //targetX = (int)transform.position.x;
         //targetY = (int)transform.position.y;
@@ -44,24 +46,33 @@ public class GemManager : MonoBehaviour
     
     void Update()
     {
-        DetectMatch();
+        //DetectMatch();
+
         ChangeColor();
+        GeneralMove();
+    }
+
+
+    private void GeneralMove()
+    {
         targetX = column;
         targetY = row;
-        if(Mathf.Abs(targetX - transform.position.x) > .1f)
+        if (Mathf.Abs(targetX - transform.position.x) > .1f)
         {
             tmpPstn = new Vector2(targetX, transform.position.y);
             transform.position = Vector2.Lerp(transform.position, tmpPstn, .4f);
-            if(board.allGems[column, row] != this.gameObject)
+            if (board.allGems[column, row] != this.gameObject)
             {
                 board.allGems[column, row] = this.gameObject;
             }
+
+            matchHandler.FindEveryMatch();
         }
         else
         {
             tmpPstn = new Vector2(targetX, transform.position.y);
             transform.position = tmpPstn;
-            
+
         }
 
         if (Mathf.Abs(targetY - transform.position.y) > .1f)
@@ -72,12 +83,15 @@ public class GemManager : MonoBehaviour
             {
                 board.allGems[column, row] = this.gameObject;
             }
+
+            matchHandler.FindEveryMatch();
+
         }
         else
         {
             tmpPstn = new Vector2(transform.position.x, targetY);
             transform.position = tmpPstn;
-            
+
         }
     }
 

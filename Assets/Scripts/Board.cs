@@ -10,10 +10,13 @@ public enum GameStates
 
 
 
+
+
 public class Board : MonoBehaviour
 {
-
+    private MatchHandler matchHandler;
     public GameStates currentState = GameStates.move;
+
 
     public int width;
     public int height;
@@ -24,6 +27,7 @@ public class Board : MonoBehaviour
     public GameObject tilePrefab;
     [Space(20)]
     public GameObject[] gems;
+    public GameObject destroyFX;
     
     //private TileBackground[,] allTiles;
     public GameObject[,] allGems;
@@ -34,6 +38,7 @@ public class Board : MonoBehaviour
     void Start()
     {
         //allTiles = new TileBackground[width, height];
+        matchHandler = FindObjectOfType<MatchHandler>();
         allGems = new GameObject[width, height];
         SetUp();
     }
@@ -148,10 +153,13 @@ public class Board : MonoBehaviour
         return false;
     }
 
-    private void DestroyMatchLocation(int column, int row)
+    public void DestroyMatchLocation(int column, int row)
     {
         if(allGems[column, row].GetComponent<GemManager>().isMatched)
         {
+            matchHandler.currentMatches.Remove(allGems[column, row]);
+
+            Instantiate(destroyFX, allGems[column, row].transform.position, Quaternion.identity);
             Destroy(allGems[column, row]);
             allGems[column, row] = null;
         }
@@ -213,9 +221,15 @@ public class Board : MonoBehaviour
     }
 
 
+
+    
+
     #endregion
 
     #region Corountines
+    ///
+    /// ////////////////////////
+   /////
     private IEnumerator FallRowGems()
     {
         int nullCounter = 0;
