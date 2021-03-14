@@ -13,6 +13,7 @@ public class GemManager : MonoBehaviour
     public int targetY;
     public bool isMatched;
     public float checkMoveTime;
+    public float canMoveTime;
 
     [Space(10)]
     private Board board;
@@ -82,14 +83,20 @@ public class GemManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-        frstTchPstn = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(board.currentState == GameStates.move)
+        {
+            frstTchPstn = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 
 
     private void OnMouseUp()
     {
-        lstTchPstn = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        MathFunctions();
+        if (board.currentState == GameStates.move)
+        {
+            lstTchPstn = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            MathFunctions();
+        }
         
     }
 
@@ -97,10 +104,14 @@ public class GemManager : MonoBehaviour
     {
         if(Mathf.Abs(lstTchPstn.y - frstTchPstn.y) > swipeDiff || Mathf.Abs(lstTchPstn.x - frstTchPstn.x) > swipeDiff)
         {
-
         //angulo da direção que foi arrastado
-        swipeAngle = Mathf.Atan2(lstTchPstn.y - frstTchPstn.y, lstTchPstn.x - frstTchPstn.x) * 180 / Mathf.PI;
-        MoveGems();
+            swipeAngle = Mathf.Atan2(lstTchPstn.y - frstTchPstn.y, lstTchPstn.x - frstTchPstn.x) * 180 / Mathf.PI;
+            MoveGems();
+            board.currentState = GameStates.wait;
+        }
+        else
+        {
+            board.currentState = GameStates.move;
         }
     }
 
@@ -205,6 +216,8 @@ public class GemManager : MonoBehaviour
                 sideGem.GetComponent<GemManager>().column = column;
                 row = prevRow;
                 column = prevColumn;
+                yield return new WaitForSeconds(canMoveTime);
+                board.currentState = GameStates.move;
             }
             else
             {

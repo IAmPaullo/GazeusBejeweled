@@ -2,8 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameStates
+{
+    wait,
+    move
+}
+
+
+
 public class Board : MonoBehaviour
 {
+
+    public GameStates currentState = GameStates.move;
+
     public int width;
     public int height;
     public float slideOffset;
@@ -237,6 +248,8 @@ public class Board : MonoBehaviour
             yield return new WaitForSeconds(refillTime);
             DestroyActualMatches();
         }
+        yield return new WaitForSeconds(refillTime);
+        currentState = GameStates.move;
     }
 
     #endregion

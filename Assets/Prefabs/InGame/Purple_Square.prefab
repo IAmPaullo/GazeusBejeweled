@@ -130,5 +130,7 @@ MonoBehaviour:
   targetY: 0
   isMatched: 0
   checkMoveTime: 0.5
+  canMoveTime: 0.3
   swipeAngle: 0
+  swipeDiff: 1
   offsetMove: 0
