@@ -6,6 +6,9 @@ public class Board : MonoBehaviour
 {
     public int width;
     public int height;
+    public float slideOffset;
+    public float fallTime = .3f;
+    public float refillTime = .5f;
     [Space(20)]
     public GameObject tilePrefab;
     [Space(20)]
@@ -32,7 +35,8 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 //Acomodando os espaços
-                Vector2 tmpPstn = new Vector2(i, j);
+                Vector2 tmpPstn = new Vector2(i, j + slideOffset);
+
                 GameObject bgTile = Instantiate(tilePrefab, tmpPstn, Quaternion.identity, this.gameObject.transform);
                 bgTile.name = "(" + i + "," + j + ")";
                 //Instanciando as jóias
@@ -40,7 +44,7 @@ public class Board : MonoBehaviour
 
                 //check por segurança, depois ver o quão pesado tá esse loop
                 int maxLoop = 0;
-                while (BetterDetectMatchesBoard(i, j, gems[gemsAvailable]) && maxLoop < 100) 
+                while (MatchesAtBoard(i, j, gems[gemsAvailable]) && maxLoop < 100) 
                 {
                     gemsAvailable = Random.Range(0, gems.Length);
                     maxLoop++;
@@ -48,6 +52,8 @@ public class Board : MonoBehaviour
                 maxLoop = 0;
 
                 GameObject gem = Instantiate(gems[gemsAvailable], tmpPstn, Quaternion.identity, this.transform);
+                gem.GetComponent<GemManager>().row = j;
+                gem.GetComponent<GemManager>().column = i;
                 gem.name = "(" + i + "," + j + ")";
                 allGems[i, j] = gem;
 
@@ -139,7 +145,6 @@ public class Board : MonoBehaviour
             allGems[column, row] = null;
         }
     }
-
     public void DestroyActualMatches()
     {
         for (int i = 0; i < width; i++)
@@ -152,7 +157,88 @@ public class Board : MonoBehaviour
                 }
             }
         }
+        StartCoroutine(FallRowGems());
     }
 
+    #region Helpers
+
+    private void Refill()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if(allGems[i,j] == null)
+                {
+                    Vector2 tmpPstn = new Vector2(i, j + slideOffset);
+                    int newGem = Random.Range(0, gems.Length);
+                    GameObject gemPiece = Instantiate(gems[newGem], tmpPstn, Quaternion.identity);
+                    allGems[i, j] = gemPiece;
+                    gemPiece.GetComponent<GemManager>().row = j;
+                    gemPiece.GetComponent<GemManager>().column = i;
+                    gemPiece.transform.parent = this.transform;
+                    gemPiece.name = "( " + i + ", " + j + " )";
+                }
+            }
+        }
+    }
+
+    private bool MatchesOnBoard()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if(allGems[i, j] != null)
+                {
+                    if (allGems[i, j].GetComponent<GemManager>().isMatched)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+
+    #endregion
+
+    #region Corountines
+    private IEnumerator FallRowGems()
+    {
+        int nullCounter = 0;
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if(allGems[i, j] == null)
+                {
+                    nullCounter++;
+                }else if(nullCounter > 0)
+                {
+                    allGems[i, j].GetComponent<GemManager>().row -= nullCounter;
+                    allGems[i, j] = null;
+                }
+            }
+            nullCounter = 0;
+        }
+        yield return new WaitForSeconds(fallTime);
+        StartCoroutine(FillBoardCounter());
+    }
+
+    private IEnumerator FillBoardCounter()
+    {
+        Refill();
+        yield return new WaitForSeconds(refillTime);
+
+        while (MatchesOnBoard())
+        {
+            yield return new WaitForSeconds(refillTime);
+            DestroyActualMatches();
+        }
+    }
+
+    #endregion
 
 }

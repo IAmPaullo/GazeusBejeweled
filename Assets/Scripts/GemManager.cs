@@ -31,12 +31,12 @@ public class GemManager : MonoBehaviour
     void Start()
     {
         board = FindObjectOfType<Board>();
-        targetX = (int)transform.position.x;
-        targetY = (int)transform.position.y;
-        row = targetY;
-        column = targetX;
-        prevRow = row;
-        prevColumn = column;
+        //targetX = (int)transform.position.x;
+        //targetY = (int)transform.position.y;
+        //row = targetY;
+        //column = targetX;
+        //prevRow = row;
+        //prevColumn = column;
 
     }
 
@@ -51,24 +51,32 @@ public class GemManager : MonoBehaviour
         {
             tmpPstn = new Vector2(targetX, transform.position.y);
             transform.position = Vector2.Lerp(transform.position, tmpPstn, .4f);
+            if(board.allGems[column, row] != this.gameObject)
+            {
+                board.allGems[column, row] = this.gameObject;
+            }
         }
         else
         {
             tmpPstn = new Vector2(targetX, transform.position.y);
             transform.position = tmpPstn;
-            board.allGems[column, row] = this.gameObject;
+            
         }
 
         if (Mathf.Abs(targetY - transform.position.y) > .1f)
         {
             tmpPstn = new Vector2(transform.position.x, targetY);
             transform.position = Vector2.Lerp(transform.position, tmpPstn, .4f);
+            if (board.allGems[column, row] != this.gameObject)
+            {
+                board.allGems[column, row] = this.gameObject;
+            }
         }
         else
         {
             tmpPstn = new Vector2(transform.position.x, targetY);
             transform.position = tmpPstn;
-            board.allGems[column, row] = this.gameObject;
+            
         }
     }
 
@@ -103,6 +111,8 @@ public class GemManager : MonoBehaviour
         {
             //Arrastando pra direita
             sideGem = board.allGems[column + 1, row ];
+            prevRow = row;
+            prevColumn = column;
             sideGem.GetComponent<GemManager>().column -= 1;
             column += 1;
         }
@@ -110,6 +120,8 @@ public class GemManager : MonoBehaviour
         {
             //Arrastando pra esquerda
             sideGem = board.allGems[column - 1, row];
+            prevRow = row;
+            prevColumn = column;
             sideGem.GetComponent<GemManager>().column += 1;
             column -= 1;
         }
@@ -117,6 +129,8 @@ public class GemManager : MonoBehaviour
         {
             //Arrastando pra cima
             sideGem = board.allGems[column , row + 1];
+            prevRow = row;
+            prevColumn = column;
             sideGem.GetComponent<GemManager>().row -= 1;
             row += 1;
         }
@@ -124,6 +138,8 @@ public class GemManager : MonoBehaviour
         {
             //Arrastando pra baixo
             sideGem = board.allGems[column, row - 1 ];
+            prevRow = row;
+            prevColumn = column;
             sideGem.GetComponent<GemManager>().row += 1;
             row -= 1;
         }
@@ -138,9 +154,9 @@ public class GemManager : MonoBehaviour
         {
             GameObject leftGem1 = board.allGems[column - 1, row];
             GameObject rightGem1 = board.allGems[column + 1, row];
-            if(leftGem1 != null && leftGem1 != null)
+            if(leftGem1 != null && rightGem1 != null)
             {
-                if(leftGem1.tag == this.gameObject.tag && rightGem1.gameObject.tag == this.gameObject.tag)
+                if (leftGem1.tag == this.gameObject.tag && rightGem1.tag == this.gameObject.tag)
                 {
                     leftGem1.GetComponent<GemManager>().isMatched = true;
                     rightGem1.GetComponent<GemManager>().isMatched = true;
