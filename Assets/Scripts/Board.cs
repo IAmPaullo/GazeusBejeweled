@@ -81,32 +81,48 @@ public class Board : MonoBehaviour
     {
         if (column > 1 && row > 1)
         {
-            if (allGems[column - 1, row].tag == gemPiece.tag &&
-                allGems[column - 2, row].tag == gemPiece.tag)
+            if ((allGems[column - 1, row] != null && allGems[column - 2, row] != null))
             {
-                return true;
+
+                if (allGems[column - 1, row].tag == gemPiece.tag &&
+                    allGems[column - 2, row].tag == gemPiece.tag)
+                {
+                    return true;
+                }
             }
-            if (allGems[column, row - 1].tag == gemPiece.tag &&
-                allGems[column, row - 2].tag == gemPiece.tag)
+            if (allGems[column, row - 1] != null && allGems[column, row - 2] != null)
             {
-                return true;
+                if (allGems[column, row - 1].tag == gemPiece.tag &&
+                    allGems[column, row - 2].tag == gemPiece.tag)
+                {
+                    return true;
+                }
             }
+
         }
         else if (column <= 1 || row <= 1)
         {
             if (row > 1)
             {
-                if (allGems[column, row - 1].tag == gemPiece.tag && allGems[column, row - 2].tag == gemPiece.tag)
+                if (allGems[column, row - 1] != null && allGems[column, row - 2] != null)
                 {
-                    return true;
+                    if (allGems[column, row - 1].tag == gemPiece.tag && allGems[column, row - 2].tag == gemPiece.tag)
+                    {
+                        return true;
+                    }
                 }
+
             }
             if (column > 1)
             {
-                if (allGems[column - 1, row].tag == gemPiece.tag && allGems[column - 2, row].tag == gemPiece.tag)
+                if ((allGems[column - 1, row] != null && allGems[column - 2, row] != null))
                 {
-                    return true;
+                    if (allGems[column - 1, row].tag == gemPiece.tag && allGems[column - 2, row].tag == gemPiece.tag)
+                    {
+                        return true;
+                    }
                 }
+
             }
         }
 
@@ -286,7 +302,7 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                if(allGems[i,j] != null)
+                if (allGems[i, j] != null)
                 {
                     shuffledBoard.Add(allGems[i, j]);
                 }
@@ -298,7 +314,15 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 int tileToUse = Random.Range(0, shuffledBoard.Count);
+               
+                int maxLoop = 0;
+                while (MatchesAtBoard(i, j, shuffledBoard[tileToUse]) && maxLoop < 100)
+                {
+                    tileToUse = Random.Range(0, shuffledBoard.Count);
+                    maxLoop++;
+                }
                 GemManager gem = shuffledBoard[tileToUse].GetComponent<GemManager>();
+                maxLoop = 0;
                 gem.column = i;
                 gem.row = j;
                 allGems[i, j] = shuffledBoard[tileToUse];
@@ -307,7 +331,7 @@ public class Board : MonoBehaviour
         }
         if (isDeadLocked())
         {
-            if(width <= 2 && height <= 2)
+            if (width <= 2 && height <= 2)
             {
                 ShuffleGems();
             }
@@ -363,7 +387,7 @@ public class Board : MonoBehaviour
                         }
                     }
 
-                    if(j < height - 2)
+                    if (j < height - 2)
                     {
 
                         if (allGems[i, j + 1] != null && allGems[i, j + 2] != null)
@@ -403,17 +427,17 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                if(allGems[i,j] != null)
+                if (allGems[i, j] != null)
                 {
-                    if( i < width - 1)
+                    if (i < width - 1)
                     {
-                        if(ChecknSwitch(i, j, Vector2.right))
+                        if (ChecknSwitch(i, j, Vector2.right))
                         {
                             return false;
                         }
                     }
 
-                    if(j < height - 1)
+                    if (j < height - 1)
                     {
                         if (ChecknSwitch(i, j, Vector2.up))
                         {
@@ -478,9 +502,7 @@ public class Board : MonoBehaviour
         {
             Debug.Log("travou tudo aqui meu");
 
-            yield return new WaitForSeconds(2f);
-            
-            animator.SetTrigger("Start");
+
             ShuffleGems();
         }
         currentState = GameStates.move;

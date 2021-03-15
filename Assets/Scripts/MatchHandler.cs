@@ -39,7 +39,7 @@ public class MatchHandler : MonoBehaviour
 
     private IEnumerator FindEveryMatchCoroutine()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
         for (int i = 0; i < board.width; i++)
         {
             for (int j = 0; j < board.height; j++)
@@ -63,7 +63,7 @@ public class MatchHandler : MonoBehaviour
                             if (leftGem.tag == currentGem.tag && rightGem.tag == currentGem.tag)
                             {
 
-                                currentMatches.Union(IsRowBomb(_leftGemPiece, _currentGemPiece, _rightGemPiece));
+                                currentMatches.Union(IsRowBomb2(_leftGemPiece, _currentGemPiece, _rightGemPiece));
 
                                 currentMatches.Union(IsColumnBomb(_leftGemPiece, _currentGemPiece, _rightGemPiece));
 
@@ -90,7 +90,7 @@ public class MatchHandler : MonoBehaviour
                             if (upGem.tag == currentGem.tag && downGem.tag == currentGem.tag)
                             {
                                 currentMatches.Union(IsColumnBomb(_upGemPiece, _currentGemPiece, _downGemPiece));
-                                currentMatches.Union(IsRowBomb(_upGemPiece, _currentGemPiece, _downGemPiece));
+                                currentMatches.Union(IsRowBomb2(_upGemPiece, _currentGemPiece, _downGemPiece));
 
                                 GetNearGem(upGem, currentGem, downGem);
 
@@ -112,7 +112,7 @@ public class MatchHandler : MonoBehaviour
                 board.selectedGem.isMatched = false;
                 
                 if ((board.selectedGem.swipeAngle > -45 && board.selectedGem.swipeAngle <= 45) ||
-                    (board.selectedGem.swipeAngle > -135 || board.selectedGem.swipeAngle >= 135))
+                    (board.selectedGem.swipeAngle < -135 || board.selectedGem.swipeAngle >= 135))
                 {
                     board.selectedGem.RowBombSpawner();
 
@@ -132,7 +132,7 @@ public class MatchHandler : MonoBehaviour
                     _sideGem.isMatched = false;
 
                     if ((board.selectedGem.swipeAngle > -45 && board.selectedGem.swipeAngle <= 45) ||
-                    (board.selectedGem.swipeAngle > -135 || board.selectedGem.swipeAngle >= 135))
+                    (board.selectedGem.swipeAngle < -135 || board.selectedGem.swipeAngle >= 135))
                     {
                         _sideGem.RowBombSpawner();
 
@@ -173,7 +173,27 @@ public class MatchHandler : MonoBehaviour
 
 
 
-    private List<GameObject> IsRowBomb(GemManager gem1, GemManager gem2, GemManager gem3)
+    //private List<GameObject> IsRowBomb(GemManager gem1, GemManager gem2, GemManager gem3)
+    //{
+    //    List<GameObject> currentGems = new List<GameObject>();
+    //    if (gem1.isRowBomb)
+    //    {
+    //        currentMatches.Union(GetRowGem(gem1.row));
+    //    }
+
+    //    if (gem2.isRowBomb)
+    //    {
+    //        currentMatches.Union(GetRowGem(gem2.row));
+    //    }
+
+    //    if (gem3.isRowBomb)
+    //    {
+    //        currentMatches.Union(GetRowGem(gem3.row));
+    //    }
+    //    return currentGems;
+    //}
+
+    private List<GameObject> IsRowBomb2(GemManager gem1, GemManager gem2, GemManager gem3)
     {
         List<GameObject> currentGems = new List<GameObject>();
         if (gem1.isRowBomb)

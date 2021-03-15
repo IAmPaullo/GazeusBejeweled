@@ -14,8 +14,8 @@ public class GemManager : MonoBehaviour
     public bool isMatched;
     [Space(20)]
     [Tooltip("Tempo pra verificar se foi possível o match")]
-    public float checkMatchTimer;
-    public float canMoveTime;
+    public float checkMatchTimer = .5f;
+    public float canMoveTime = .5f;
     [Space(10)]
 
     [Header("Power Ups")]
@@ -23,7 +23,6 @@ public class GemManager : MonoBehaviour
     public bool isRowBomb;
     public bool isColorBomb;
     public GameObject colorBomb;
-    public Material colorMaterial;
 
 
 
@@ -49,6 +48,7 @@ public class GemManager : MonoBehaviour
         board = FindObjectOfType<Board>();
         isColumnBomb = false;
         isRowBomb = false;
+        isColorBomb = false;
 
 
     }
@@ -70,7 +70,7 @@ public class GemManager : MonoBehaviour
         if (Mathf.Abs(targetX - transform.position.x) > .1f)
         {
             tmpPstn = new Vector2(targetX, transform.position.y);
-            transform.position = Vector2.Lerp(transform.position, tmpPstn, .4f);
+            transform.position = Vector2.Lerp(transform.position, tmpPstn, .6f);
             if (board.allGems[column, row] != this.gameObject)
             {
                 board.allGems[column, row] = this.gameObject;
@@ -88,7 +88,7 @@ public class GemManager : MonoBehaviour
         if (Mathf.Abs(targetY - transform.position.y) > .1f)
         {
             tmpPstn = new Vector2(transform.position.x, targetY);
-            transform.position = Vector2.Lerp(transform.position, tmpPstn, .4f);
+            transform.position = Vector2.Lerp(transform.position, tmpPstn, .6f);
             if (board.allGems[column, row] != this.gameObject)
             {
                 board.allGems[column, row] = this.gameObject;
@@ -129,9 +129,10 @@ public class GemManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            isColorBomb = true;
-            GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity, this.gameObject.transform);
-            board.allGems[column, row].tag = "Color Bomb";
+            //isColumnBomb = true;
+            //this.gameObject.GetComponent<SpriteRenderer>().color = color;
+            //GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity, this.gameObject.transform);
+            //board.allGems[column, row].tag = "Color Bomb";
             //this.gameObject.GetComponent<SpriteRenderer>().material = colorMaterial;
         }
     }
@@ -142,15 +143,21 @@ public class GemManager : MonoBehaviour
             //angulo da direção que foi arrastado
             swipeAngle = Mathf.Atan2(lstTchPstn.y - frstTchPstn.y, lstTchPstn.x - frstTchPstn.x) * 180 / Mathf.PI;
             MoveGems();
-            if (sideGem != null)
-
-            {
-                board.currentState = GameStates.wait;
-            }
             board.selectedGem = this;
+
+            //if (sideGem != null)
+
+            //{
+            //    board.currentState = GameStates.wait;
+            //}
+            //board.selectedGem = this;
+        }
+        else
+        {
+
+            board.currentState = GameStates.move;
         }
         
-            board.currentState = GameStates.move;
 
         
     }
@@ -161,11 +168,21 @@ public class GemManager : MonoBehaviour
         sideGem = board.allGems[column + (int)dir.x, row + (int)dir.y];
         prevRow = row;
         prevColumn = column;
-        sideGem.GetComponent<GemManager>().column += -1 * (int)dir.x;
-        sideGem.GetComponent<GemManager>().row += -1 * (int)dir.y;
-        column += (int)dir.x;
-        row += (int)dir.y;
-        StartCoroutine(CheckMovePossibilities());
+        if(sideGem != null)
+        {
+            sideGem.GetComponent<GemManager>().column += -1 * (int)dir.x;
+            sideGem.GetComponent<GemManager>().row += -1 * (int)dir.y;
+            column += (int)dir.x;
+            row += (int)dir.y;
+
+            StartCoroutine(CheckMovePossibilities());
+        }
+        else
+        {
+            board.currentState = GameStates.move;
+        }
+        
+        
     }
 
 
@@ -187,6 +204,10 @@ public class GemManager : MonoBehaviour
         else if (swipeAngle < -45 && swipeAngle >= -135 && row > 0)
         {
             MoveGems2_0(Vector2.down);
+        }
+        else
+        {
+            board.currentState = GameStates.move;
         }
         //StartCoroutine(CheckMovePossibilities());
     }
@@ -300,7 +321,7 @@ public class GemManager : MonoBehaviour
             {
                 board.DestroyActualMatches();
             }
-            sideGem = null;
+            //sideGem = null;
         }
 
     }
