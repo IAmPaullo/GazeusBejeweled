@@ -76,7 +76,7 @@ public class GemManager : MonoBehaviour
                 board.allGems[column, row] = this.gameObject;
             }
 
-            matchHandler.FindEveryMatch();
+            matchHandler.FindAllMatches();
         }
         else
         {
@@ -94,7 +94,7 @@ public class GemManager : MonoBehaviour
                 board.allGems[column, row] = this.gameObject;
             }
 
-            matchHandler.FindEveryMatch();
+            matchHandler.FindAllMatches();
 
         }
         else
@@ -293,14 +293,14 @@ public class GemManager : MonoBehaviour
     {
         if (isColorBomb)
         {
-            matchHandler.DetectSameColorGem(sideGem.tag);
+            matchHandler.MatchPiecesOfColor(sideGem.tag);
             isMatched = true;
 
         }else if(sideGem != null)
         {
             if (sideGem.GetComponent<GemManager>().isColorBomb)
             {
-                matchHandler.DetectSameColorGem(this.gameObject.tag);
+                matchHandler.MatchPiecesOfColor(this.gameObject.tag);
                 sideGem.GetComponent<GemManager>().isMatched = true;
             }
         }
