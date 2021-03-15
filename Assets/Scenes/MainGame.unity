@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 1
-  width: 4
-  height: 4
+  width: 8
+  height: 8
   slideOffset: 20
   fallTime: 0.3
   refillTime: 0.5
@@ -167,6 +167,7 @@ MonoBehaviour:
   destroyFX: {fileID: 2500809861846031090, guid: 01e33c54122e8f746a721f9172c2f3be,
     type: 3}
   selectedGem: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!4 &312203001
 Transform:
   m_ObjectHideFlags: 0
