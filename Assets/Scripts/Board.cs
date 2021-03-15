@@ -33,13 +33,19 @@ public class Board : MonoBehaviour
     public GameObject[,] allGems;
     public GemManager selectedGem;
     public Animator animator;
+    private ScoreManager scoreManager;
+    private SoundManager soundManager;
+    public int baseGemValue = 10;
+    private int streakValue = 1;
 
 
 
     void Start()
     {
         //allTiles = new TileBackground[width, height];
+        soundManager = FindObjectOfType<SoundManager>();
         matchHandler = FindObjectOfType<MatchHandler>();
+        scoreManager = FindObjectOfType<ScoreManager>();
         allGems = new GameObject[width, height];
         FillBoard();
     }
@@ -63,6 +69,7 @@ public class Board : MonoBehaviour
                 int maxLoop = 0;
                 while (MatchesAtBoard(i, j, gems[gemsAvailable]) && maxLoop < 100)
                 {
+
                     gemsAvailable = Random.Range(0, gems.Length);
                     maxLoop++;
                 }
@@ -204,35 +211,30 @@ public class Board : MonoBehaviour
         }
         if (matchHandler.currentMatches.Count == 5 || matchHandler.currentMatches.Count == 8)
         {
-            if (ColumnOrRow())
+          
+            if(ColumnOrRow() && selectedGem != null && selectedGem.isMatched)
             {
-                if (selectedGem != null)
-                {
-                    if (selectedGem.isMatched)
+                if (!selectedGem.isColorBomb)
                     {
-                        if (!selectedGem.isColorBomb)
+                        selectedGem.isMatched = false;
+                        selectedGem.ColorBombSpawner();
+                }
+                else
+                {
+                    if (selectedGem.sideGem != null)
+                    {
+                        GemManager _otherGem = selectedGem.sideGem.GetComponent<GemManager>();
+                        if(_otherGem.isMatched && !_otherGem.isColorBomb)
                         {
-                            selectedGem.isMatched = false;
-                            selectedGem.ColorBombSpawner();
-                        }
-                        else
-                        {
-                            if (selectedGem.sideGem != null)
-                            {
-                                GemManager _otherGem = selectedGem.sideGem.GetComponent<GemManager>();
-                                if (_otherGem.isMatched)
-                                {
-                                    if (!_otherGem.isColorBomb)
-                                    {
-                                        _otherGem.isMatched = false;
-                                        _otherGem.ColorBombSpawner();
-                                    }
-                                }
-                            }
+                            _otherGem.isMatched = false;
+                            _otherGem.ColorBombSpawner();
                         }
                     }
                 }
             }
+
+
+
             else
             {
                 //outra bomba?
@@ -250,9 +252,13 @@ public class Board : MonoBehaviour
             }
 
 
-
+            if(soundManager != null)
+            {
+                soundManager.PlayRandomSound();
+            }
             Instantiate(destroyFX, allGems[column, row].transform.position, Quaternion.identity);
             Destroy(allGems[column, row]);
+            scoreManager.IncreaseScore(baseGemValue * streakValue);
             allGems[column, row] = null;
         }
     }
@@ -284,6 +290,14 @@ public class Board : MonoBehaviour
                 {
                     Vector2 tmpPstn = new Vector2(i, j + slideOffset);
                     int newGem = Random.Range(0, gems.Length);
+                    int maxIterations = 0;
+
+                    while(MatchesAtBoard(i, j, gems[newGem]) && maxIterations < 100)
+                    {
+                        maxIterations++;
+                        int gemToUse = Random.Range(0, gems.Length);
+                    }
+
                     GameObject gemPiece = Instantiate(gems[newGem], tmpPstn, Quaternion.identity);
                     allGems[i, j] = gemPiece;
                     gemPiece.GetComponent<GemManager>().row = j;
@@ -492,6 +506,7 @@ public class Board : MonoBehaviour
 
         while (MatchesOnBoard())
         {
+            streakValue++;
             yield return new WaitForSeconds(refillTime);
             DestroyActualMatches();
         }
@@ -506,6 +521,7 @@ public class Board : MonoBehaviour
             ShuffleGems();
         }
         currentState = GameStates.move;
+        streakValue = 1;
     }
 
     #endregion

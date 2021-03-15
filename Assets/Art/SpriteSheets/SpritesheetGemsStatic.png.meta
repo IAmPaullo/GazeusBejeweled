@@ -1,0 +1,3596 @@
+fileFormatVersion: 2
+guid: af152d39beb8ca5409bb1a41790d4d29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2123823398934659428
+    second: SpritesheetGemsStatic_0
+  - first:
+      213: -6196092194258160510
+    second: SpritesheetGemsStatic_1
+  - first:
+      213: 1869388352940731469
+    second: SpritesheetGemsStatic_2
+  - first:
+      213: 3805067864861902484
+    second: SpritesheetGemsStatic_3
+  - first:
+      213: 4964483388046930835
+    second: SpritesheetGemsStatic_4
+  - first:
+      213: -8308625213301254061
+    second: SpritesheetGemsStatic_5
+  - first:
+      213: -832855775282845002
+    second: SpritesheetGemsStatic_6
+  - first:
+      213: -5749369116672068885
+    second: SpritesheetGemsStatic_7
+  - first:
+      213: -8963251480656967707
+    second: SpritesheetGemsStatic_8
+  - first:
+      213: 6772728993817195974
+    second: SpritesheetGemsStatic_9
+  - first:
+      213: 3904897220907035553
+    second: SpritesheetGemsStatic_10
+  - first:
+      213: 2120783488667395097
+    second: SpritesheetGemsStatic_11
+  - first:
+      213: 8838363961928480165
+    second: SpritesheetGemsStatic_12
+  - first:
+      213: 8155554374140670474
+    second: SpritesheetGemsStatic_13
+  - first:
+      213: 6372995669046176932
+    second: SpritesheetGemsStatic_14
+  - first:
+      213: 2868943112259220498
+    second: SpritesheetGemsStatic_15
+  - first:
+      213: 6524838008674017665
+    second: SpritesheetGemsStatic_16
+  - first:
+      213: -8556839915516146769
+    second: SpritesheetGemsStatic_17
+  - first:
+      213: 9209175272814533918
+    second: SpritesheetGemsStatic_18
+  - first:
+      213: -182919585079400153
+    second: SpritesheetGemsStatic_19
+  - first:
+      213: 3664266834679308872
+    second: SpritesheetGemsStatic_20
+  - first:
+      213: 320471302492110326
+    second: SpritesheetGemsStatic_21
+  - first:
+      213: 7751541528856128219
+    second: SpritesheetGemsStatic_22
+  - first:
+      213: -4218851444069639721
+    second: SpritesheetGemsStatic_23
+  - first:
+      213: -2996362478579487401
+    second: SpritesheetGemsStatic_24
+  - first:
+      213: 1713897006022208700
+    second: SpritesheetGemsStatic_25
+  - first:
+      213: -3451264988902958772
+    second: SpritesheetGemsStatic_26
+  - first:
+      213: 1210861774228498209
+    second: SpritesheetGemsStatic_27
+  - first:
+      213: 296931842441090320
+    second: SpritesheetGemsStatic_28
+  - first:
+      213: -6781128857774554992
+    second: SpritesheetGemsStatic_29
+  - first:
+      213: 1082199048510612182
+    second: SpritesheetGemsStatic_30
+  - first:
+      213: 6075581200561391121
+    second: SpritesheetGemsStatic_31
+  - first:
+      213: 8929765224325969083
+    second: SpritesheetGemsStatic_32
+  - first:
+      213: 7057422583006237577
+    second: SpritesheetGemsStatic_33
+  - first:
+      213: 2784473875895289407
+    second: SpritesheetGemsStatic_34
+  - first:
+      213: -7802207514456530709
+    second: SpritesheetGemsStatic_35
+  - first:
+      213: -1401797183941910704
+    second: SpritesheetGemsStatic_36
+  - first:
+      213: -4706650621695786458
+    second: SpritesheetGemsStatic_37
+  - first:
+      213: -3325901228894720874
+    second: SpritesheetGemsStatic_38
+  - first:
+      213: -7594423326721893967
+    second: SpritesheetGemsStatic_39
+  - first:
+      213: -1602346783257443399
+    second: SpritesheetGemsStatic_40
+  - first:
+      213: 4738806189247852915
+    second: SpritesheetGemsStatic_41
+  - first:
+      213: 1364479496057635595
+    second: SpritesheetGemsStatic_42
+  - first:
+      213: 8379030782463275335
+    second: SpritesheetGemsStatic_43
+  - first:
+      213: 1977930934895473991
+    second: SpritesheetGemsStatic_44
+  - first:
+      213: -3988402891736231081
+    second: SpritesheetGemsStatic_45
+  - first:
+      213: 1121972948586671019
+    second: SpritesheetGemsStatic_46
+  - first:
+      213: -1223016275661763874
+    second: SpritesheetGemsStatic_47
+  - first:
+      213: -6733134432382532742
+    second: SpritesheetGemsStatic_48
+  - first:
+      213: 2440276230711565517
+    second: SpritesheetGemsStatic_49
+  - first:
+      213: 7556432293537288243
+    second: SpritesheetGemsStatic_50
+  - first:
+      213: -4673472338847462727
+    second: SpritesheetGemsStatic_51
+  - first:
+      213: -4487085864085238046
+    second: SpritesheetGemsStatic_52
+  - first:
+      213: -900502392778959007
+    second: SpritesheetGemsStatic_53
+  - first:
+      213: 6215922087956603916
+    second: SpritesheetGemsStatic_54
+  - first:
+      213: 2203108494715027102
+    second: SpritesheetGemsStatic_55
+  - first:
+      213: 4510738512797801497
+    second: SpritesheetGemsStatic_56
+  - first:
+      213: 2272389120232410553
+    second: SpritesheetGemsStatic_57
+  - first:
+      213: 4395474357262374507
+    second: SpritesheetGemsStatic_58
+  - first:
+      213: -2102409901005273876
+    second: SpritesheetGemsStatic_59
+  - first:
+      213: -6435522518031668389
+    second: SpritesheetGemsStatic_60
+  - first:
+      213: 3264264874095401793
+    second: SpritesheetGemsStatic_61
+  - first:
+      213: -5520317914581128114
+    second: SpritesheetGemsStatic_62
+  - first:
+      213: -6178456067031208857
+    second: SpritesheetGemsStatic_63
+  - first:
+      213: 2671376331259147692
+    second: SpritesheetGemsStatic_64
+  - first:
+      213: -8005999094892563452
+    second: SpritesheetGemsStatic_65
+  - first:
+      213: 576164837509980514
+    second: SpritesheetGemsStatic_66
+  - first:
+      213: 8748777217200670479
+    second: SpritesheetGemsStatic_67
+  - first:
+      213: 9127041488155687674
+    second: SpritesheetGemsStatic_68
+  - first:
+      213: -5654181918912111815
+    second: SpritesheetGemsStatic_69
+  - first:
+      213: -6886223464596126784
+    second: SpritesheetGemsStatic_70
+  - first:
+      213: 5596694773646767566
+    second: SpritesheetGemsStatic_71
+  - first:
+      213: -7717965358522895213
+    second: SpritesheetGemsStatic_72
+  - first:
+      213: 2506227553449051767
+    second: SpritesheetGemsStatic_73
+  - first:
+      213: -7571124887874273237
+    second: SpritesheetGemsStatic_74
+  - first:
+      213: -4464051146532952167
+    second: SpritesheetGemsStatic_75
+  - first:
+      213: 12626453683438920
+    second: SpritesheetGemsStatic_76
+  - first:
+      213: 5700091839784089747
+    second: SpritesheetGemsStatic_77
+  - first:
+      213: -5463639015828627552
+    second: SpritesheetGemsStatic_78
+  - first:
+      213: 4349845883156961511
+    second: SpritesheetGemsStatic_79
+  - first:
+      213: 4151257515745628769
+    second: SpritesheetGemsStatic_80
+  - first:
+      213: -1116681107916662400
+    second: SpritesheetGemsStatic_81
+  - first:
+      213: -4438927331134890280
+    second: SpritesheetGemsStatic_82
+  - first:
+      213: 5236642862411409970
+    second: SpritesheetGemsStatic_83
+  - first:
+      213: 1003314761576046367
+    second: SpritesheetGemsStatic_84
+  - first:
+      213: -1990693595391575318
+    second: SpritesheetGemsStatic_85
+  - first:
+      213: -2876556780261911345
+    second: SpritesheetGemsStatic_86
+  - first:
+      213: -2964991967455958906
+    second: SpritesheetGemsStatic_87
+  - first:
+      213: 5225819681737062042
+    second: SpritesheetGemsStatic_88
+  - first:
+      213: -5275668975573343313
+    second: SpritesheetGemsStatic_89
+  - first:
+      213: -5492459696494814640
+    second: SpritesheetGemsStatic_90
+  - first:
+      213: 7325398371610327890
+    second: SpritesheetGemsStatic_91
+  - first:
+      213: 6520655957229928561
+    second: SpritesheetGemsStatic_92
+  - first:
+      213: 352146633120247298
+    second: SpritesheetGemsStatic_93
+  - first:
+      213: 8638567652640750448
+    second: SpritesheetGemsStatic_94
+  - first:
+      213: -1897559484979487704
+    second: SpritesheetGemsStatic_95
+  - first:
+      213: 2869415613993394565
+    second: SpritesheetGemsStatic_96
+  - first:
+      213: -4483694249117887484
+    second: SpritesheetGemsStatic_97
+  - first:
+      213: -5242109829894389329
+    second: SpritesheetGemsStatic_98
+  - first:
+      213: 2634354629471299782
+    second: SpritesheetGemsStatic_99
+  - first:
+      213: 7082738095009880786
+    second: SpritesheetGemsStatic_100
+  - first:
+      213: 4908231710155974261
+    second: SpritesheetGemsStatic_101
+  - first:
+      213: -5888933144036109209
+    second: SpritesheetGemsStatic_102
+  - first:
+      213: 4132934156480672108
+    second: SpritesheetGemsStatic_103
+  - first:
+      213: -6133709169230455566
+    second: SpritesheetGemsStatic_104
+  - first:
+      213: 4851508309969013722
+    second: SpritesheetGemsStatic_105
+  - first:
+      213: -8412020069713766409
+    second: SpritesheetGemsStatic_106
+  - first:
+      213: -2617585157945969783
+    second: SpritesheetGemsStatic_107
+  - first:
+      213: -4416263040384326478
+    second: SpritesheetGemsStatic_108
+  - first:
+      213: -3002483148499013075
+    second: SpritesheetGemsStatic_109
+  - first:
+      213: -5384853137245082249
+    second: SpritesheetGemsStatic_110
+  - first:
+      213: -2584639956540280816
+    second: SpritesheetGemsStatic_111
+  - first:
+      213: 1241480666881050527
+    second: SpritesheetGemsStatic_112
+  - first:
+      213: 3043845109821146909
+    second: SpritesheetGemsStatic_113
+  - first:
+      213: -9172945491985799206
+    second: SpritesheetGemsStatic_114
+  - first:
+      213: 21903953435133883
+    second: SpritesheetGemsStatic_115
+  - first:
+      213: 3697301512511324071
+    second: SpritesheetGemsStatic_116
+  - first:
+      213: -2265367028886148966
+    second: SpritesheetGemsStatic_117
+  - first:
+      213: 329234877135094242
+    second: SpritesheetGemsStatic_118
+  - first:
+      213: -3105472309461537551
+    second: SpritesheetGemsStatic_119
+  - first:
+      213: -8681134895978987481
+    second: SpritesheetGemsStatic_120
+  - first:
+      213: 4866450046189081321
+    second: SpritesheetGemsStatic_121
+  - first:
+      213: -4040693360320703145
+    second: SpritesheetGemsStatic_122
+  - first:
+      213: -5514892579851064710
+    second: SpritesheetGemsStatic_123
+  - first:
+      213: -4208446597871904789
+    second: SpritesheetGemsStatic_124
+  - first:
+      213: -6842473706072764233
+    second: SpritesheetGemsStatic_125
+  - first:
+      213: -6882465658168057079
+    second: SpritesheetGemsStatic_126
+  - first:
+      213: 6607325730520931923
+    second: SpritesheetGemsStatic_127
+  - first:
+      213: 2475955228777583681
+    second: SpritesheetGemsStatic_128
+  - first:
+      213: 9008523042183642919
+    second: SpritesheetGemsStatic_129
+  - first:
+      213: -4826039758050697739
+    second: SpritesheetGemsStatic_130
+  - first:
+      213: 4003813888086617188
+    second: SpritesheetGemsStatic_131
+  - first:
+      213: -3352480474387025997
+    second: SpritesheetGemsStatic_132
+  - first:
+      213: -2874740774047879757
+    second: SpritesheetGemsStatic_133
+  - first:
+      213: -6370438450590475550
+    second: SpritesheetGemsStatic_134
+  - first:
+      213: 3501282603582166685
+    second: SpritesheetGemsStatic_135
+  - first:
+      213: 7912416531988946246
+    second: SpritesheetGemsStatic_136
+  - first:
+      213: -5326646166063667735
+    second: SpritesheetGemsStatic_137
+  - first:
+      213: -6760333265193526286
+    second: SpritesheetGemsStatic_138
+  - first:
+      213: -4871557959828179568
+    second: SpritesheetGemsStatic_139
+  - first:
+      213: 2191997541045972374
+    second: SpritesheetGemsStatic_140
+  - first:
+      213: -3720888105697310357
+    second: SpritesheetGemsStatic_141
+  - first:
+      213: 8832268450291278546
+    second: SpritesheetGemsStatic_142
+  - first:
+      213: 487281217068275735
+    second: SpritesheetGemsStatic_143
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 70
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 667
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461c92bf026597d10800000000000000
+      internalID: 2123823398934659428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 667
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284fba54afe030aa0800000000000000
+      internalID: -6196092194258160510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 667
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ce8447dc661f910800000000000000
+      internalID: 1869388352940731469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 667
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496095f10115ec430800000000000000
+      internalID: 3805067864861902484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_4
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 667
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3937dd5a65365e440800000000000000
+      internalID: 4964483388046930835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_5
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 667
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3581355b365d1bc80800000000000000
+      internalID: -8308625213301254061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_6
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 667
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba2225c51a1174f0800000000000000
+      internalID: -832855775282845002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_7
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 667
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2f826ff332630b0800000000000000
+      internalID: -5749369116672068885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_8
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 668
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e782f684422c9380800000000000000
+      internalID: -8963251480656967707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_9
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 667
+        width: 61
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5767ce2219dfd50800000000000000
+      internalID: 6772728993817195974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_10
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 667
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abe298555bf03630800000000000000
+      internalID: 3904897220907035553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_11
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 667
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914a887b8598e6d10800000000000000
+      internalID: 2120783488667395097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 607
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a57c5a123d28aa70800000000000000
+      internalID: 8838363961928480165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 607
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02b9094e795e2170800000000000000
+      internalID: 8155554374140670474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_14
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 607
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aca990abcd617850800000000000000
+      internalID: 6372995669046176932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 607
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214b30f6f8880d720800000000000000
+      internalID: 2868943112259220498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_16
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 607
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1816bfb4991ec8a50800000000000000
+      internalID: 6524838008674017665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_17
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 607
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabc6c3de6fff3980800000000000000
+      internalID: -8556839915516146769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_18
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 607
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ddb6a4e109dcf70800000000000000
+      internalID: 9209175272814533918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_19
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 607
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72961e44b93267df0800000000000000
+      internalID: -182919585079400153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_20
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 608
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8422e43a5471ad230800000000000000
+      internalID: 3664266834679308872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_21
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 607
+        width: 61
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdbfb1a3fa827400800000000000000
+      internalID: 320471302492110326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_22
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 607
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda682973f1039b60800000000000000
+      internalID: 7751541528856128219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_23
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 607
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9d51cc6f0a375c0800000000000000
+      internalID: -4218851444069639721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75de5fd7338ca66d0800000000000000
+      internalID: -2996362478579487401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_25
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 547
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc2f811f3cf8c710800000000000000
+      internalID: 1713897006022208700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_26
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 546
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4952b637c4aa10d0800000000000000
+      internalID: -3451264988902958772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 547
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1272df44e58ddc010800000000000000
+      internalID: 1210861774228498209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_28
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 547
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015143fffe9ee1400800000000000000
+      internalID: 296931842441090320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_29
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 546
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09082385b3794e1a0800000000000000
+      internalID: -6781128857774554992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_30
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 547
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2adb60d4eb40f00800000000000000
+      internalID: 1082199048510612182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_31
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 546
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116c08f79ecc05450800000000000000
+      internalID: 6075581200561391121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_32
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 548
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4f59bd826eceb70800000000000000
+      internalID: 8929765224325969083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_33
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 546
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98318e9827001f160800000000000000
+      internalID: 7057422583006237577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_34
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 547
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f360813cc3074a620800000000000000
+      internalID: 2784473875895289407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_35
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 547
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06fec7a9df8b390800000000000000
+      internalID: -7802207514456530709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 486
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fdff363e0db8ce0800000000000000
+      internalID: -1401797183941910704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_37
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 486
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62283fb423e9eaeb0800000000000000
+      internalID: -4706650621695786458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_38
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 486
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ce1b5247608d1d0800000000000000
+      internalID: -3325901228894720874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 487
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b91dc8a8303b9690800000000000000
+      internalID: -7594423326721893967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_40
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 486
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b343f8171253c9e0800000000000000
+      internalID: -1602346783257443399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_41
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 486
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3717a813f1f93c140800000000000000
+      internalID: 4738806189247852915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_42
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 486
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03c1d15fda9fe210800000000000000
+      internalID: 1364479496057635595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_43
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 486
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74179c64a1c484470800000000000000
+      internalID: 8379030782463275335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_44
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 488
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74573bca4b5037b10800000000000000
+      internalID: 1977930934895473991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_45
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 486
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753dbe093b856a8c0800000000000000
+      internalID: -3988402891736231081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_46
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 486
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab2b18c37c029f00800000000000000
+      internalID: 1121972948586671019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_47
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 486
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edac8a65d29f60fe0800000000000000
+      internalID: -1223016275661763874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 426
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7343ec48e91f82a0800000000000000
+      internalID: -6733134432382532742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 426
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc546d7d4a9dd120800000000000000
+      internalID: 2440276230711565517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_50
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 426
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3309491a227ddd860800000000000000
+      internalID: 7556432293537288243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 427
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba026f3bad742fb0800000000000000
+      internalID: -4673472338847462727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_52
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 426
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eec5822e2baab1c0800000000000000
+      internalID: -4487085864085238046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_53
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 426
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167550748d5c083f0800000000000000
+      internalID: -900502392778959007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_54
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 426
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c046824a434634650800000000000000
+      internalID: 6215922087956603916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_55
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 426
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e722dd083039e10800000000000000
+      internalID: 2203108494715027102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_56
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 428
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c9cf947cc599e30800000000000000
+      internalID: 4510738512797801497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_57
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 426
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd4aee7dd5298f10800000000000000
+      internalID: 2272389120232410553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_58
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 426
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6656f3c3acdffc30800000000000000
+      internalID: 4395474357262374507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_59
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 426
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce40156855db2d2e0800000000000000
+      internalID: -2102409901005273876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 366
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5be1b0ed5e60b6a0800000000000000
+      internalID: -6435522518031668389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_61
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 366
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bdd31bb9ffc4d20800000000000000
+      internalID: 3264264874095401793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_62
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 366
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4caa26ca14e363b0800000000000000
+      internalID: -5520317914581128114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_63
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 366
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c6f3021f6b14aa0800000000000000
+      internalID: -6178456067031208857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_64
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 366
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca57616ae92a21520800000000000000
+      internalID: 2671376331259147692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_65
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 366
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40474d4ad3af4e090800000000000000
+      internalID: -8005999094892563452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_66
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 366
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2616ad7fdd2fef700800000000000000
+      internalID: 576164837509980514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_67
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 366
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07c64aa686e96970800000000000000
+      internalID: 8748777217200670479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_68
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 368
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afab5c750e3c9ae70800000000000000
+      internalID: 9127041488155687674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_69
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 366
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b9ecb708f4881b0800000000000000
+      internalID: -5654181918912111815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_70
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 366
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3c9c46e383f60a0800000000000000
+      internalID: -6886223464596126784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_71
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 366
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5308b7e347bad40800000000000000
+      internalID: 5596694773646767566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394f870e56744e490800000000000000
+      internalID: -7717965358522895213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_73
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 306
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77680a96ea8e7c220800000000000000
+      internalID: 2506227553449051767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_74
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 306
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20822c2706fde690800000000000000
+      internalID: -7571124887874273237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_75
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 306
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9976abf32218c02c0800000000000000
+      internalID: -4464051146532952167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_76
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 306
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845039651bbdc2000800000000000000
+      internalID: 12626453683438920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_77
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 306
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398fe61f35bca1f40800000000000000
+      internalID: 5700091839784089747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_78
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 306
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0afd19043414d24b0800000000000000
+      internalID: -5463639015828627552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_79
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 306
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e81445c8c1cd5c30800000000000000
+      internalID: 4349845883156961511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_80
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 308
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162503d57ba3c9930800000000000000
+      internalID: 4151257515745628769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_81
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 306
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089dc33e270c080f0800000000000000
+      internalID: -1116681107916662400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_82
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 306
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de9eeb5c13c562c0800000000000000
+      internalID: -4438927331134890280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_83
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 306
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23aed9d30fa4ca840800000000000000
+      internalID: 5236642862411409970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 246
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f55a9b57d7ced00800000000000000
+      internalID: 1003314761576046367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_85
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 246
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea3a0ed8b2af54e0800000000000000
+      internalID: -1990693595391575318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_86
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 246
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc45f3859da6418d0800000000000000
+      internalID: -2876556780261911345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_87
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 246
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688a6e9c38b3ad6d0800000000000000
+      internalID: -2964991967455958906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_88
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 246
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96be2e1057d58840800000000000000
+      internalID: 5225819681737062042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_89
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 246
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3e666b40f09c6b0800000000000000
+      internalID: -5275668975573343313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_90
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 246
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ad64f910dd6c3b0800000000000000
+      internalID: -5492459696494814640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_91
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 246
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bfe02e10b09a560800000000000000
+      internalID: 7325398371610327890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_92
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 247
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17089319b060e7a50800000000000000
+      internalID: 6520655957229928561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_93
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 246
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e6bff3f7313e400800000000000000
+      internalID: 352146633120247298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_94
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 246
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bf4dfc28b52e770800000000000000
+      internalID: 8638567652640750448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_95
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 246
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cdf9db3b38aa5e0800000000000000
+      internalID: -1897559484979487704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58129015c4632d720800000000000000
+      internalID: 2869415613993394565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_97
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 186
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404ddd706d7b6c1c0800000000000000
+      internalID: -4483694249117887484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_98
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 186
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1cf8332e84047b0800000000000000
+      internalID: -5242109829894389329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_99
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 186
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8ea0ef39b1f8420800000000000000
+      internalID: 2634354629471299782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_100
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 186
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dad03e75c0fa4260800000000000000
+      internalID: 7082738095009880786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_101
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 186
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576a7274cba8d1440800000000000000
+      internalID: 4908231710155974261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_102
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 186
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76414b3a18e464ea0800000000000000
+      internalID: -5888933144036109209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_103
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 186
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61fb15d7b12b5930800000000000000
+      internalID: 4132934156480672108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_104
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 187
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc56742200b0eaa0800000000000000
+      internalID: -6133709169230455566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_105
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 186
+        width: 61
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb0f808a15045340800000000000000
+      internalID: 4851508309969013722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_106
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 186
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7114db050824b80800000000000000
+      internalID: -8412020069713766409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_107
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 186
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983bb4bda287cabd0800000000000000
+      internalID: -2617585157945969783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4a433c92846b2c0800000000000000
+      internalID: -4416263040384326478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_109
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 126
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22be99fb790556d0800000000000000
+      internalID: -3002483148499013075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_110
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 126
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77debd21a982545b0800000000000000
+      internalID: -5384853137245082249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_111
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 126
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010b22e47a3812cd0800000000000000
+      internalID: -2584639956540280816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_112
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 126
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97c5f0c610aa3110800000000000000
+      internalID: 1241480666881050527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_113
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 126
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17033a1009ed3a20800000000000000
+      internalID: 3043845109821146909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_114
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 126
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad76a26eca623b080800000000000000
+      internalID: -9172945491985799206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_115
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 126
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb78da39781dd4000800000000000000
+      internalID: 21903953435133883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_116
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 127
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af70c0f2247f4330800000000000000
+      internalID: 3697301512511324071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_117
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 126
+        width: 61
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98eb5d80bccf80e0800000000000000
+      internalID: -2265367028886148966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_118
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 126
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e18e4b506da19400800000000000000
+      internalID: 329234877135094242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_119
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 126
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcabb6536527e4d0800000000000000
+      internalID: -3105472309461537551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720cce58ec9668780800000000000000
+      internalID: -8681134895978987481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_121
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 66
+        width: 23
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e29840988a198340800000000000000
+      internalID: 4866450046189081321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_122
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 65
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7551ecb1cc29ce7c0800000000000000
+      internalID: -4040693360320703145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_123
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 66
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a2a83fa6a2773b0800000000000000
+      internalID: -5514892579851064710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_124
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 66
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7d4a5dd189895c0800000000000000
+      internalID: -4208446597871904789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_125
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 65
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b01594da66aa01a0800000000000000
+      internalID: -6842473706072764233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_126
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 66
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9036112e2f19c70a0800000000000000
+      internalID: -6882465658168057079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_127
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 65
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e9ffaaebfe1bb50800000000000000
+      internalID: 6607325730520931923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_128
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 67
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1441f03992c5c5220800000000000000
+      internalID: 2475955228777583681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_129
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 65
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ff6484af3b40d70800000000000000
+      internalID: 9008523042183642919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_130
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 66
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdd975d866760db0800000000000000
+      internalID: -4826039758050697739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_131
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 66
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cad22a487609730800000000000000
+      internalID: 4003813888086617188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf6abf45c89971d0800000000000000
+      internalID: -3352480474387025997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_133
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 5
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd6b8d3f7eda18d0800000000000000
+      internalID: -2874740774047879757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_134
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 5
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea90113bf7a797a0800000000000000
+      internalID: -6370438450590475550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_135
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9615c43afd079030800000000000000
+      internalID: 3501282603582166685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_136
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 5
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d11200aec8ecd60800000000000000
+      internalID: 7912416531988946246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_137
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 3
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e52493a883f316b0800000000000000
+      internalID: -5326646166063667735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_138
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 5
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb12ec86b87e22a0800000000000000
+      internalID: -6760333265193526286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_139
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095f6bd98dfb46cb0800000000000000
+      internalID: -4871557959828179568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_140
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d239e562a8b6e10800000000000000
+      internalID: 2191997541045972374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_141
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 3
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b698fe26bffbc5cc0800000000000000
+      internalID: -3720888105697310357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_142
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 2
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d260843c55829a70800000000000000
+      internalID: 8832268450291278546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetGemsStatic_143
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71813196fab23c600800000000000000
+      internalID: 487281217068275735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
