@@ -28,11 +28,11 @@ public class Board : MonoBehaviour
     [Space(20)]
     public GameObject[] gems;
     public GameObject destroyFX;
-    
+
     //private TileBackground[,] allTiles;
     public GameObject[,] allGems;
     public GemManager selectedGem;
-
+    public Animator animator;
 
 
 
@@ -61,7 +61,7 @@ public class Board : MonoBehaviour
 
                 //check por segurança, depois ver o quão pesado tá esse loop
                 int maxLoop = 0;
-                while (MatchesAtBoard(i, j, gems[gemsAvailable]) && maxLoop < 100) 
+                while (MatchesAtBoard(i, j, gems[gemsAvailable]) && maxLoop < 100)
                 {
                     gemsAvailable = Random.Range(0, gems.Length);
                     maxLoop++;
@@ -79,23 +79,24 @@ public class Board : MonoBehaviour
     }
     private bool MatchesAtBoard(int column, int row, GameObject gemPiece)
     {
-        if(column > 1 && row > 1)
+        if (column > 1 && row > 1)
         {
-            if(allGems[column -1, row].tag == gemPiece.tag && 
+            if (allGems[column - 1, row].tag == gemPiece.tag &&
                 allGems[column - 2, row].tag == gemPiece.tag)
             {
                 return true;
             }
             if (allGems[column, row - 1].tag == gemPiece.tag &&
-                allGems[column , row - 2].tag == gemPiece.tag)
+                allGems[column, row - 2].tag == gemPiece.tag)
             {
                 return true;
             }
-        }else if(column <= 1 || row <= 1)
+        }
+        else if (column <= 1 || row <= 1)
         {
-            if(row > 1)
+            if (row > 1)
             {
-                if(allGems[column, row - 1].tag == gemPiece.tag && allGems[column, row - 2].tag == gemPiece.tag)
+                if (allGems[column, row - 1].tag == gemPiece.tag && allGems[column, row - 2].tag == gemPiece.tag)
                 {
                     return true;
                 }
@@ -108,7 +109,7 @@ public class Board : MonoBehaviour
                 }
             }
         }
-        
+
         return false;
     }
 
@@ -121,7 +122,7 @@ public class Board : MonoBehaviour
 
             //if the pieces to my left (already generated) are both of the same type as me then ...
 
-            if (allGems[column - 1, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag && 
+            if (allGems[column - 1, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag &&
                 allGems[column - 2, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag)
 
             {
@@ -140,7 +141,7 @@ public class Board : MonoBehaviour
 
             //if the pieces below me (already generated) are both of the same type as me then ...
 
-            if (allGems[column, row - 1].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag && 
+            if (allGems[column, row - 1].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag &&
                 allGems[column, row - 2].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag)
 
             {
@@ -162,10 +163,10 @@ public class Board : MonoBehaviour
         GemManager firstGem = matchHandler.currentMatches[0].GetComponent<GemManager>();
         if (firstGem != null)
         {
-            foreach(GameObject currentGem in matchHandler.currentMatches)
+            foreach (GameObject currentGem in matchHandler.currentMatches)
             {
                 GemManager _gem = currentGem.GetComponent<GemManager>();
-                if(_gem.row == firstGem.row)
+                if (_gem.row == firstGem.row)
                 {
                     numHorizontal++;
                 }
@@ -180,12 +181,12 @@ public class Board : MonoBehaviour
 
     private void BombSpawnerCheck()
     {
-        if(matchHandler.currentMatches.Count == 4 || matchHandler.currentMatches.Count == 7)
+        if (matchHandler.currentMatches.Count == 4 || matchHandler.currentMatches.Count == 7)
         {
 
             matchHandler.CheckBombs();
         }
-        if(matchHandler.currentMatches.Count == 5 || matchHandler.currentMatches.Count == 8)
+        if (matchHandler.currentMatches.Count == 5 || matchHandler.currentMatches.Count == 8)
         {
             if (ColumnOrRow())
             {
@@ -200,7 +201,7 @@ public class Board : MonoBehaviour
                         }
                         else
                         {
-                            if(selectedGem.sideGem != null)
+                            if (selectedGem.sideGem != null)
                             {
                                 GemManager _otherGem = selectedGem.sideGem.GetComponent<GemManager>();
                                 if (_otherGem.isMatched)
@@ -225,14 +226,14 @@ public class Board : MonoBehaviour
 
     public void DestroyMatchLocation(int column, int row)
     {
-        if(allGems[column, row].GetComponent<GemManager>().isMatched)
+        if (allGems[column, row].GetComponent<GemManager>().isMatched)
         {
-            if(matchHandler.currentMatches.Count >= 4 )
+            if (matchHandler.currentMatches.Count >= 4)
             {
                 BombSpawnerCheck();
             }
 
-            
+
 
             Instantiate(destroyFX, allGems[column, row].transform.position, Quaternion.identity);
             Destroy(allGems[column, row]);
@@ -245,7 +246,7 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                if(allGems[i, j] != null)
+                if (allGems[i, j] != null)
                 {
                     DestroyMatchLocation(i, j);
                 }
@@ -263,7 +264,7 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                if(allGems[i,j] == null)
+                if (allGems[i, j] == null)
                 {
                     Vector2 tmpPstn = new Vector2(i, j + slideOffset);
                     int newGem = Random.Range(0, gems.Length);
@@ -278,13 +279,49 @@ public class Board : MonoBehaviour
         }
     }
 
+    void ShuffleGems()
+    {
+        List<GameObject> shuffledBoard = new List<GameObject>();
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if(allGems[i,j] != null)
+                {
+                    shuffledBoard.Add(allGems[i, j]);
+                }
+            }
+        }
+
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                int tileToUse = Random.Range(0, shuffledBoard.Count);
+                GemManager gem = shuffledBoard[tileToUse].GetComponent<GemManager>();
+                gem.column = i;
+                gem.row = j;
+                allGems[i, j] = shuffledBoard[tileToUse];
+                shuffledBoard.Remove(shuffledBoard[tileToUse]);
+            }
+        }
+        if (isDeadLocked())
+        {
+            if(width <= 2 && height <= 2)
+            {
+                ShuffleGems();
+            }
+            ///procurar jeito melhor
+        }
+    }
+
     private bool MatchesOnBoard()
     {
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)
             {
-                if(allGems[i, j] != null)
+                if (allGems[i, j] != null)
                 {
                     if (allGems[i, j].GetComponent<GemManager>().isMatched)
                     {
@@ -296,16 +333,111 @@ public class Board : MonoBehaviour
         return false;
     }
 
+    #region DeadLockDetection Helpers
+
+    private void SwitchPieces(int column, int row, Vector2 dir)
+    {
+        GameObject holder = allGems[column + (int)dir.x, row + (int)dir.y];
+        allGems[column + (int)dir.x, row + (int)dir.y] = allGems[column, row];
+        allGems[column, row] = holder;
+    }
+
+    bool CheckForMatchesOnBoard()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (allGems[i, j] != null)
+                {
+                    if (i < width - 2)
+                    {
+
+                        if (allGems[i + 1, j] != null && allGems[i + 2, j] != null)
+                        {
+                            if (allGems[i + 1, j].tag == allGems[i, j].tag &&
+                                allGems[i + 2, j].tag == allGems[i, j].tag)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                    if(j < height - 2)
+                    {
+
+                        if (allGems[i, j + 1] != null && allGems[i, j + 2] != null)
+                        {
+                            if (allGems[i, j + 1].tag == allGems[i, j].tag &&
+                                allGems[i, j + 2].tag == allGems[i, j].tag)
+                            {
+                                return true;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        return false;
+    }
 
 
-    
+    bool ChecknSwitch(int column, int row, Vector2 dir)
+    {
+        SwitchPieces(column, row, dir);
+        if (CheckForMatchesOnBoard())
+        {
+            SwitchPieces(column, row, dir);
+            return true;
+        }
+        SwitchPieces(column, row, dir);
+        return false;
+    }
+
+    bool isDeadLocked()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if(allGems[i,j] != null)
+                {
+                    if( i < width - 1)
+                    {
+                        if(ChecknSwitch(i, j, Vector2.right))
+                        {
+                            return false;
+                        }
+                    }
+
+                    if(j < height - 1)
+                    {
+                        if (ChecknSwitch(i, j, Vector2.up))
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    #endregion
+
+
+
+
 
     #endregion
 
     #region Corountines
     ///
     /// ////////////////////////
-   /////
+    /////
     private IEnumerator FallRowGems()
     {
         int nullCounter = 0;
@@ -313,10 +445,11 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                if(allGems[i, j] == null)
+                if (allGems[i, j] == null)
                 {
                     nullCounter++;
-                }else if(nullCounter > 0)
+                }
+                else if (nullCounter > 0)
                 {
                     allGems[i, j].GetComponent<GemManager>().row -= nullCounter;
                     allGems[i, j] = null;
@@ -341,6 +474,15 @@ public class Board : MonoBehaviour
         matchHandler.currentMatches.Clear();
         selectedGem = null;
         yield return new WaitForSeconds(refillTime);
+        if (isDeadLocked())
+        {
+            Debug.Log("travou tudo aqui meu");
+
+            yield return new WaitForSeconds(2f);
+            
+            animator.SetTrigger("Start");
+            ShuffleGems();
+        }
         currentState = GameStates.move;
     }
 
