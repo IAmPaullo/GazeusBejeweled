@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2558074653242530423}
   - component: {fileID: -562936228227706520}
   - component: {fileID: 8178198556897515645}
+  - component: {fileID: -6628957271904244486}
   m_Layer: 0
   m_Name: Blue_Diamond
   m_TagString: Blue
@@ -129,8 +130,35 @@ MonoBehaviour:
   targetX: 0
   targetY: 0
   isMatched: 0
-  checkMoveTime: 0.5
-  canMoveTime: 0.3
+  checkMatchTimer: 0.5
+  canMoveTime: 0.5
+  isColumnBomb: 0
+  isRowBomb: 0
+  isColorBomb: 0
+  colorBomb: {fileID: 4344708415865627744, guid: 2a14768fcdbe413448d9bf2dd0722d1b,
+    type: 3}
+  colorMaterial: {fileID: 0}
+  sideGem: {fileID: 0}
   swipeAngle: 0
   swipeDiff: 1
   offsetMove: 0
+  color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!95 &-6628957271904244486
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866082592458488333}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 847de84c57297e94891609a6222b43f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

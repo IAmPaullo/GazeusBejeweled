@@ -31,6 +31,7 @@ public class Board : MonoBehaviour
     
     //private TileBackground[,] allTiles;
     public GameObject[,] allGems;
+    public GemManager selectedGem;
 
 
 
@@ -40,11 +41,11 @@ public class Board : MonoBehaviour
         //allTiles = new TileBackground[width, height];
         matchHandler = FindObjectOfType<MatchHandler>();
         allGems = new GameObject[width, height];
-        SetUp();
+        FillBoard();
     }
 
 
-    void SetUp()
+    void FillBoard()
     {
         for (int i = 0; i < width; i++)
         {
@@ -153,11 +154,85 @@ public class Board : MonoBehaviour
         return false;
     }
 
+
+    private bool ColumnOrRow()
+    {
+        int numHorizontal = 0;
+        int numVertical = 0;
+        GemManager firstGem = matchHandler.currentMatches[0].GetComponent<GemManager>();
+        if (firstGem != null)
+        {
+            foreach(GameObject currentGem in matchHandler.currentMatches)
+            {
+                GemManager _gem = currentGem.GetComponent<GemManager>();
+                if(_gem.row == firstGem.row)
+                {
+                    numHorizontal++;
+                }
+                if (_gem.column == firstGem.column)
+                {
+                    numVertical++;
+                }
+            }
+        }
+        return (numVertical == 5 || numHorizontal == 5);
+    }
+
+    private void BombSpawnerCheck()
+    {
+        if(matchHandler.currentMatches.Count == 4 || matchHandler.currentMatches.Count == 7)
+        {
+
+            matchHandler.CheckBombs();
+        }
+        if(matchHandler.currentMatches.Count == 5 || matchHandler.currentMatches.Count == 8)
+        {
+            if (ColumnOrRow())
+            {
+                if (selectedGem != null)
+                {
+                    if (selectedGem.isMatched)
+                    {
+                        if (!selectedGem.isColorBomb)
+                        {
+                            selectedGem.isMatched = false;
+                            selectedGem.ColorBombSpawner();
+                        }
+                        else
+                        {
+                            if(selectedGem.sideGem != null)
+                            {
+                                GemManager _otherGem = selectedGem.sideGem.GetComponent<GemManager>();
+                                if (_otherGem.isMatched)
+                                {
+                                    if (!_otherGem.isColorBomb)
+                                    {
+                                        _otherGem.isMatched = false;
+                                        _otherGem.ColorBombSpawner();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                //outra bomba?
+            }
+        }
+    }
+
     public void DestroyMatchLocation(int column, int row)
     {
         if(allGems[column, row].GetComponent<GemManager>().isMatched)
         {
-            matchHandler.currentMatches.Remove(allGems[column, row]);
+            if(matchHandler.currentMatches.Count >= 4 )
+            {
+                BombSpawnerCheck();
+            }
+
+            
 
             Instantiate(destroyFX, allGems[column, row].transform.position, Quaternion.identity);
             Destroy(allGems[column, row]);
@@ -176,6 +251,7 @@ public class Board : MonoBehaviour
                 }
             }
         }
+        matchHandler.currentMatches.Clear();
         StartCoroutine(FallRowGems());
     }
 
@@ -262,6 +338,8 @@ public class Board : MonoBehaviour
             yield return new WaitForSeconds(refillTime);
             DestroyActualMatches();
         }
+        matchHandler.currentMatches.Clear();
+        selectedGem = null;
         yield return new WaitForSeconds(refillTime);
         currentState = GameStates.move;
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7925535403484718095}
   - component: {fileID: 4417248806430178520}
   - component: {fileID: 7360476258890330515}
+  - component: {fileID: 1853023032847596883}
   m_Layer: 0
   m_Name: Green_Triangle
   m_TagString: Green
@@ -103,11 +104,19 @@ MonoBehaviour:
   targetX: 0
   targetY: 0
   isMatched: 0
-  checkMoveTime: 0.5
-  canMoveTime: 0.3
+  checkMatchTimer: 0.5
+  canMoveTime: 0.5
+  isColumnBomb: 0
+  isRowBomb: 0
+  isColorBomb: 0
+  colorBomb: {fileID: 4344708415865627744, guid: 2a14768fcdbe413448d9bf2dd0722d1b,
+    type: 3}
+  colorMaterial: {fileID: 0}
+  sideGem: {fileID: 0}
   swipeAngle: 0
   swipeDiff: 1
   offsetMove: 0
+  color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!61 &7360476258890330515
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +143,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.57848406, y: 0.48796603}
   m_EdgeRadius: 0
+--- !u!95 &1853023032847596883
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889890171818194786}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4f2e34282d9aa34298784a13df560ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

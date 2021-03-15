@@ -129,8 +129,16 @@ MonoBehaviour:
   targetX: 0
   targetY: 0
   isMatched: 0
-  checkMoveTime: 0.5
-  canMoveTime: 0.3
+  checkMatchTimer: 0.5
+  canMoveTime: 0.5
+  isColumnBomb: 0
+  isRowBomb: 0
+  isColorBomb: 0
+  colorBomb: {fileID: 4344708415865627744, guid: 2a14768fcdbe413448d9bf2dd0722d1b,
+    type: 3}
+  colorMaterial: {fileID: 0}
+  sideGem: {fileID: 0}
   swipeAngle: 0
   swipeDiff: 1
   offsetMove: 0
+  color: {r: 1, g: 0, b: 0, a: 1}
