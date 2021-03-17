@@ -9,9 +9,6 @@ public enum GameStates
 }
 
 
-
-
-
 public class Board : MonoBehaviour
 {
     private MatchHandler matchHandler;
@@ -29,12 +26,12 @@ public class Board : MonoBehaviour
     public GameObject[] gems;
     public GameObject destroyFX;
 
-    //private TileBackground[,] allTiles;
     public GameObject[,] allGems;
     public GemManager selectedGem;
     public Animator animator;
     private ScoreManager scoreManager;
     private SoundManager soundManager;
+    private ProgressBarHandler progressBar;
     public int baseGemValue = 10;
     private int streakValue = 1;
 
@@ -42,10 +39,11 @@ public class Board : MonoBehaviour
 
     void Start()
     {
-        //allTiles = new TileBackground[width, height];
+        
         soundManager = FindObjectOfType<SoundManager>();
         matchHandler = FindObjectOfType<MatchHandler>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        progressBar = FindObjectOfType<ProgressBarHandler>();
         allGems = new GameObject[width, height];
         FillBoard();
     }
@@ -57,15 +55,15 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                //Acomodando os espaços
+                
                 Vector2 tmpPstn = new Vector2(i, j + slideOffset);
 
                 GameObject bgTile = Instantiate(tilePrefab, tmpPstn, Quaternion.identity, this.gameObject.transform);
                 bgTile.name = "(" + i + "," + j + ")";
-                //Instanciando as jóias
+                
                 int gemsAvailable = Random.Range(0, gems.Length);
 
-                //check por segurança, depois ver o quão pesado tá esse loop
+                
                 int maxLoop = 0;
                 while (MatchesAtBoard(i, j, gems[gemsAvailable]) && maxLoop < 100)
                 {
@@ -256,8 +254,13 @@ public class Board : MonoBehaviour
             {
                 soundManager.PlayRandomSound();
             }
-            Instantiate(destroyFX, allGems[column, row].transform.position, Quaternion.identity);
+
+            if( progressBar != null)
+            {
+                progressBar.AddProgress(baseGemValue * streakValue);
+            }
             Destroy(allGems[column, row]);
+            Instantiate(destroyFX, allGems[column, row].transform.position, Quaternion.identity);
             scoreManager.IncreaseScore(baseGemValue * streakValue);
             allGems[column, row] = null;
         }
@@ -349,7 +352,6 @@ public class Board : MonoBehaviour
             {
                 ShuffleGems();
             }
-            ///procurar jeito melhor
         }
     }
 
@@ -473,9 +475,6 @@ public class Board : MonoBehaviour
     #endregion
 
     #region Corountines
-    ///
-    /// ////////////////////////
-    /////
     private IEnumerator FallRowGems()
     {
         int nullCounter = 0;

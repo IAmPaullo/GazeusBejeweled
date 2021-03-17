@@ -34,8 +34,4 @@ public class CameraReSizer : MonoBehaviour
         }
     }
     
-    void Update()
-    {
-        
-    }
 }

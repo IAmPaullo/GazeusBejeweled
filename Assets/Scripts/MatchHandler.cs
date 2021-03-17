@@ -9,7 +9,7 @@ public class MatchHandler : MonoBehaviour
     private Board board;
     public List<GameObject> currentMatches = new List<GameObject>();
 
-    // Use this for initialization
+    
     void Start()
     {
         board = FindObjectOfType<Board>();
@@ -20,25 +20,6 @@ public class MatchHandler : MonoBehaviour
         StartCoroutine(FindAllMatchesCo());
     }
 
-    //private List<GameObject> IsAdjacentBomb(GemManager gem1, GemManager gem2, GemManager gem3)
-    //{
-    //    List<GameObject> currentDots = new List<GameObject>();
-    //    if (gem1.isAdjacentBomb)
-    //    {
-    //        currentMatches.Union(GetAdjacentPieces(gem1.column, gem1.row));
-    //    }
-
-    //    if (gem2.isAdjacentBomb)
-    //    {
-    //        currentMatches.Union(GetAdjacentPieces(gem2.column, dogem2t2.row));
-    //    }
-
-    //    if (gem3.isAdjacentBomb)
-    //    {
-    //        currentMatches.Union(GetAdjacentPieces(gem3.column, gem3.row));
-    //    }
-    //    return currentDots;
-    //}
 
     private List<GameObject> IsRowBomb(GemManager gem1, GemManager gem2, GemManager gem3)
     {
@@ -126,8 +107,6 @@ public class MatchHandler : MonoBehaviour
 
                                 currentMatches.Union(IsColumnBomb(_leftGem, _currentGemPiece, _rightGem));
 
-                                //currentMatches.Union(IsAdjacentBomb(_leftGem, currentDotDot, rightDotDot));
-
 
                                 GetNearbyPieces(leftGem, currentGem, rightGem);
 
@@ -154,16 +133,11 @@ public class MatchHandler : MonoBehaviour
 
                                 currentMatches.Union(IsRowBomb(_upGemPiece, _currentGemPiece, _downGemPiece));
 
-                                //currentMatches.Union(IsAdjacentBomb(upDotDot, currentDotDot, downDotDot));
-
-
                                 GetNearbyPieces(upGem, currentGem, downGem);
 
                             }
                         }
                     }
-
-
                 }
             }
         }
@@ -176,13 +150,13 @@ public class MatchHandler : MonoBehaviour
         {
             for (int j = 0; j < board.height; j++)
             {
-                //Check if that piece exists
+                
                 if (board.allGems[i, j] != null)
                 {
-                    //Check the tag on that dot
+                    
                     if (board.allGems[i, j].tag == color)
                     {
-                        //Set that dot to be matched
+                        
                         board.allGems[i, j].GetComponent<GemManager>().isMatched = true;
                     }
                 }
@@ -197,7 +171,6 @@ public class MatchHandler : MonoBehaviour
         {
             for (int j = row - 1; j <= row + 1; j++)
             {
-                //Check if the piece is inside the board
                 if (i >= 0 && i < board.width && j >= 0 && j < board.height)
                 {
                     if (board.allGems[i, j] != null)
@@ -252,25 +225,15 @@ public class MatchHandler : MonoBehaviour
 
     public void CheckBombs()
     {
-        //Did the player move something?
+       
         if (board.selectedGem != null)
         {
-            //Is the piece they moved matched?
+            
             if (board.selectedGem.isMatched)
             {
-                //make it unmatched
+                
                 board.selectedGem.isMatched = false;
-                //Decide what kind of bomb to make
-                /*
-                int typeOfBomb = Random.Range(0, 100);
-                if(typeOfBomb < 50){
-                    //Make a row bomb
-                    board.currentDot.MakeRowBomb();
-                }else if(typeOfBomb >= 50){
-                    //Make a column bomb
-                    board.currentDot.MakeColumnBomb();
-                }
-                */
+                
                 if ((board.selectedGem.swipeAngle > -45 && board.selectedGem.swipeAngle <= 45)
                    || (board.selectedGem.swipeAngle < -135 || board.selectedGem.swipeAngle >= 135))
                 {
@@ -281,29 +244,16 @@ public class MatchHandler : MonoBehaviour
                     board.selectedGem.ColumnBombSpawner();
                 }
             }
-            //Is the other piece matched?
+            
             else if (board.selectedGem.sideGem != null)
             {
                 GemManager sideGem = board.selectedGem.sideGem.GetComponent<GemManager>();
-                //Is the other Dot matched?
+                
                 if (sideGem.isMatched)
                 {
-                    //Make it unmatched
+                    
                     sideGem.isMatched = false;
-                    /*
-                    //Decide what kind of bomb to make
-                    int typeOfBomb = Random.Range(0, 100);
-                    if (typeOfBomb < 50)
-                    {
-                        //Make a row bomb
-                        otherDot.MakeRowBomb();
-                    }
-                    else if (typeOfBomb >= 50)
-                    {
-                        //Make a column bomb
-                        otherDot.MakeColumnBomb();
-                    }
-                    */
+                   
                     if ((board.selectedGem.swipeAngle > -45 && board.selectedGem.swipeAngle <= 45)
                    || (board.selectedGem.swipeAngle < -135 || board.selectedGem.swipeAngle >= 135))
                     {

@@ -9,13 +9,6 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public int score;
 
-
-    void Start()
-    {
-        
-    }
-
-    
     void Update()
     {
         scoreText.text = "" + score.ToString();
