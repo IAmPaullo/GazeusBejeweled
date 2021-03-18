@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour
 {
-    public Animator anim;
+    
     public GameObject canvasPanel;
     [SerializeField] GameObject winPanel;
+    [SerializeField] GameObject timeOutPanel;
+    [SerializeField] Animator anim;
+    [SerializeField] ScoreManager scoreManager;
 
     public void LoadScene(int index)
     {
@@ -27,6 +30,11 @@ public class ScenesManager : MonoBehaviour
         StartCoroutine(LoadLevelCo(nextLevel));
     }
 
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 
     public void TriggerOpening()
     {
@@ -36,12 +44,28 @@ public class ScenesManager : MonoBehaviour
 
     public void CallWinPanel()
     {
-        winPanel.layer = 0;
+        if(winPanel != null)
+        {
+            winPanel.layer = 0;
 
-        canvasPanel.GetComponent<Canvas>().sortingOrder = 4;
-        winPanel.SetActive(true);
+            canvasPanel.GetComponent<Canvas>().sortingOrder = 4;
+            winPanel.SetActive(true);
+        }
         
+    }
 
+    public void CallTimeOutPanel()
+    {
+        timeOutPanel.layer = 0;
+        canvasPanel.GetComponent<Canvas>().sortingOrder = 4;
+        timeOutPanel.SetActive(true);
+
+        if (PlayerPrefs.GetInt("HighScore") < scoreManager.score)
+        {
+            PlayerPrefs.SetInt("HighScore", scoreManager.score);
+        }
+
+        
     }
 
     IEnumerator LoadLevelCo(int index)
@@ -49,6 +73,15 @@ public class ScenesManager : MonoBehaviour
         anim.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(index);
+    }
+
+    public void OpenPanel()
+    {
+        anim.SetTrigger("OpenPanel");
+    }
+    public void ClosePanel()
+    {
+        anim.SetTrigger("ClosePanel");
     }
 
 }
