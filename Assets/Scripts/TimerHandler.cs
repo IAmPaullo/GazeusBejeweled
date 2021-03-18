@@ -6,17 +6,29 @@ using UnityEngine.UI;
 public class TimerHandler : MonoBehaviour
 {
 
-    public float duration;
-    public Image fillImage;
+    [SerializeField] float duration;
+    [SerializeField] Image fillImage;
+    [SerializeField] GameObject finishFX;
+    [SerializeField] GameObject finishFXParentPosition;
+    [SerializeField] ScenesManager sceneManager;
+    private bool isOutOfTime;
 
 
     void Start()
     {
+        //sceneManager = FindObjectOfType<ScenesManager>();
         fillImage.fillAmount = 1f;
         StartCoroutine(CountDown(duration));
     }
 
-    
+    private void Update()
+    {
+
+        OutOfTime();
+
+
+    }
+
     public IEnumerator CountDown(float duration)
     {
         float startingTime = Time.time;
@@ -24,7 +36,7 @@ public class TimerHandler : MonoBehaviour
         float value = 1;
 
 
-        while(Time.time - startingTime < duration)
+        while (Time.time - startingTime < duration)
         {
             time -= Time.deltaTime;
             value = time / duration;
@@ -33,6 +45,14 @@ public class TimerHandler : MonoBehaviour
         }
     }
 
+    void OutOfTime()
+    {
+        if (fillImage.fillAmount == 0 && isOutOfTime == false)
+        {
+            isOutOfTime = true;
+            Instantiate(finishFX, finishFXParentPosition.transform.position, Quaternion.identity, finishFXParentPosition.transform);
+            sceneManager.CallTimeOutPanel();
+        }
+    }
 
-    
 }

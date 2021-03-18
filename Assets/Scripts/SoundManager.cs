@@ -14,15 +14,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] SoundBoard[] soundBoard;
     private void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(transform.gameObject);
-        }
+       
 
 
         foreach (SoundBoard snds in soundBoard)
