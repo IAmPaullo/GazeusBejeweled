@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4778960445329800143
+--- !u!1 &402518014541441698
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,77 +8,61 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4201738093105093595}
-  - component: {fileID: 9149628688401843907}
-  - component: {fileID: 8140073003616177090}
+  - component: {fileID: 5790877484818847406}
+  - component: {fileID: 2993920872319848834}
+  - component: {fileID: 8828185132133834818}
   m_Layer: 0
-  m_Name: SoundManager
+  m_Name: BackgroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4201738093105093595
+--- !u!4 &5790877484818847406
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778960445329800143}
+  m_GameObject: {fileID: 402518014541441698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: -0.8431256, y: 4.2210183, z: -13.783842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9149628688401843907
+--- !u!114 &2993920872319848834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778960445329800143}
+  m_GameObject: {fileID: 402518014541441698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47bac0563b29964a8e9b7774ee8d12d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11bded8d1b1c5a04b87fdffdb8f28fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundBoard:
-  - name: Pop0
-    clip: {fileID: 8300000, guid: 68d460737544c174ba17b7cd1b4063e9, type: 3}
-    volume: 0.22
-    pitch: 1
-    audioSource: {fileID: 0}
-  - name: Pop1
-    clip: {fileID: 8300000, guid: 40ba80d6753e9734687df1f82c2acd03, type: 3}
-    volume: 0.22
-    pitch: 1
-    audioSource: {fileID: 0}
-  - name: Pop2
-    clip: {fileID: 8300000, guid: 47eff7b9d8a55c843a032af8f9cb8304, type: 3}
-    volume: 0.22
-    pitch: 1
-    audioSource: {fileID: 0}
---- !u!82 &8140073003616177090
+--- !u!82 &8828185132133834818
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778960445329800143}
+  m_GameObject: {fileID: 402518014541441698}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 34476d3376ad6f04d974223ffa224291, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.36
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 151
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
