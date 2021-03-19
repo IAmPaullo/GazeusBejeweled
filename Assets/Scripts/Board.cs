@@ -56,6 +56,8 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 
+                
+
                 Vector2 tmpPstn = new Vector2(i, j + slideOffset);
 
                 GameObject bgTile = Instantiate(tilePrefab, tmpPstn, Quaternion.identity, this.gameObject.transform);
@@ -67,7 +69,7 @@ public class Board : MonoBehaviour
                 int maxLoop = 0;
                 while (MatchesAtBoard(i, j, gems[gemsAvailable]) && maxLoop < 100)
                 {
-
+                    
                     gemsAvailable = Random.Range(0, gems.Length);
                     maxLoop++;
                 }
@@ -137,11 +139,11 @@ public class Board : MonoBehaviour
 
     private bool BetterDetectMatchesBoard(int column, int row, GameObject gemPiece)
     {
-        if (column > 1)          //!!! split these into two so it checks them correctly (row vs column)
+        if (column > 1)         
 
         {
 
-            //if the pieces to my left (already generated) are both of the same type as me then ...
+        
 
             if (allGems[column - 1, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag &&
                 allGems[column - 2, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag)
@@ -259,6 +261,7 @@ public class Board : MonoBehaviour
             {
                 progressBar.AddProgress(baseGemValue * streakValue);
             }
+
             Destroy(allGems[column, row]);
             Instantiate(destroyFX, allGems[column, row].transform.position, Quaternion.identity);
             scoreManager.IncreaseScore(baseGemValue * streakValue);
