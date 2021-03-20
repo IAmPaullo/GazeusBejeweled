@@ -17,29 +17,36 @@ public class Board : MonoBehaviour
 
     public int width;
     public int height;
-    public float slideOffset;
-    public float fallTime = .3f;
-    public float refillTime = .5f;
+    [Header("Variáveis de timing no board")]
+    [SerializeField] float slideOffset;
+    [SerializeField] float fallTime = .3f;
+    [SerializeField] float refillTime = .5f;
     [Space(20)]
-    public GameObject tilePrefab;
-    [Space(20)]
+
+
+    [Header("Slot dos prefabs que vão servir como peças")]
     public GameObject[] gems;
-    public GameObject destroyFX;
+    [Space(10)]
+    [SerializeField] GameObject tilePrefab;
+    [SerializeField] GameObject destroyFX;
+    [Space(20)]
 
     public GameObject[,] allGems;
     public GemManager selectedGem;
-    public Animator animator;
     private ScoreManager scoreManager;
     private SoundManager soundManager;
     private ProgressBarHandler progressBar;
+    [Space(20)]
+
+    [Header("Variáveis de valores das peças e streak")]
     public int baseGemValue = 10;
-    private int streakValue = 1;
+    [SerializeField] int streakValue = 1;
 
 
 
     void Start()
     {
-        
+
         soundManager = FindObjectOfType<SoundManager>();
         matchHandler = FindObjectOfType<MatchHandler>();
         scoreManager = FindObjectOfType<ScoreManager>();
@@ -55,27 +62,27 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                
-                
 
-                Vector2 tmpPstn = new Vector2(i, j + slideOffset);
 
-                GameObject bgTile = Instantiate(tilePrefab, tmpPstn, Quaternion.identity, this.gameObject.transform);
+
+                Vector2 tempPos = new Vector2(i, j + slideOffset);
+
+                GameObject bgTile = Instantiate(tilePrefab, tempPos, Quaternion.identity, this.gameObject.transform);
                 bgTile.name = "(" + i + "," + j + ")";
-                
+
                 int gemsAvailable = Random.Range(0, gems.Length);
 
-                
+
                 int maxLoop = 0;
                 while (MatchesAtBoard(i, j, gems[gemsAvailable]) && maxLoop < 100)
                 {
-                    
+
                     gemsAvailable = Random.Range(0, gems.Length);
                     maxLoop++;
                 }
                 maxLoop = 0;
 
-                GameObject gem = Instantiate(gems[gemsAvailable], tmpPstn, Quaternion.identity, this.transform);
+                GameObject gem = Instantiate(gems[gemsAvailable], tempPos, Quaternion.identity, this.transform);
                 gem.GetComponent<GemManager>().row = j;
                 gem.GetComponent<GemManager>().column = i;
                 gem.name = "(" + i + "," + j + ")";
@@ -137,46 +144,7 @@ public class Board : MonoBehaviour
     }
 
 
-    private bool BetterDetectMatchesBoard(int column, int row, GameObject gemPiece)
-    {
-        if (column > 1)         
-
-        {
-
-        
-
-            if (allGems[column - 1, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag &&
-                allGems[column - 2, row].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag)
-
-            {
-
-                return true;
-
-            }
-
-        }
-
-
-
-        if (row > 1)
-
-        {
-
-            //if the pieces below me (already generated) are both of the same type as me then ...
-
-            if (allGems[column, row - 1].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag &&
-                allGems[column, row - 2].GetComponent<GemManager>().tag == gemPiece.GetComponent<GemManager>().tag)
-
-            {
-
-                return true;
-
-            }
-
-        }
-
-        return false;
-    }
+    
 
 
     private bool ColumnOrRow()
@@ -211,33 +179,26 @@ public class Board : MonoBehaviour
         }
         if (matchHandler.currentMatches.Count == 5 || matchHandler.currentMatches.Count == 8)
         {
-          
-            if(ColumnOrRow() && selectedGem != null && selectedGem.isMatched)
+
+            if (ColumnOrRow() && selectedGem != null && selectedGem.isMatched)
             {
                 if (!selectedGem.isColorBomb)
-                    {
-                        selectedGem.isMatched = false;
-                        selectedGem.ColorBombSpawner();
+                {
+                    selectedGem.isMatched = false;
+                    selectedGem.ColorBombSpawner();
                 }
                 else
                 {
                     if (selectedGem.sideGem != null)
                     {
                         GemManager _otherGem = selectedGem.sideGem.GetComponent<GemManager>();
-                        if(_otherGem.isMatched && !_otherGem.isColorBomb)
+                        if (_otherGem.isMatched && !_otherGem.isColorBomb)
                         {
                             _otherGem.isMatched = false;
                             _otherGem.ColorBombSpawner();
                         }
                     }
                 }
-            }
-
-
-
-            else
-            {
-                //outra bomba?
             }
         }
     }
@@ -252,12 +213,12 @@ public class Board : MonoBehaviour
             }
 
 
-            if(soundManager != null)
+            if (soundManager != null)
             {
                 soundManager.PlayRandomSound();
             }
 
-            if( progressBar != null)
+            if (progressBar != null)
             {
                 progressBar.AddProgress(baseGemValue * streakValue);
             }
@@ -284,8 +245,6 @@ public class Board : MonoBehaviour
         StartCoroutine(FallRowGems());
     }
 
-    #region Helpers
-
     private void Refill()
     {
         for (int i = 0; i < width; i++)
@@ -294,17 +253,17 @@ public class Board : MonoBehaviour
             {
                 if (allGems[i, j] == null)
                 {
-                    Vector2 tmpPstn = new Vector2(i, j + slideOffset);
+                    Vector2 tempPos = new Vector2(i, j + slideOffset);
                     int newGem = Random.Range(0, gems.Length);
                     int maxIterations = 0;
 
-                    while(MatchesAtBoard(i, j, gems[newGem]) && maxIterations < 100)
+                    while (MatchesAtBoard(i, j, gems[newGem]) && maxIterations < 100)
                     {
                         maxIterations++;
                         int gemToUse = Random.Range(0, gems.Length);
                     }
 
-                    GameObject gemPiece = Instantiate(gems[newGem], tmpPstn, Quaternion.identity);
+                    GameObject gemPiece = Instantiate(gems[newGem], tempPos, Quaternion.identity);
                     allGems[i, j] = gemPiece;
                     gemPiece.GetComponent<GemManager>().row = j;
                     gemPiece.GetComponent<GemManager>().column = i;
@@ -334,7 +293,7 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 int tileToUse = Random.Range(0, shuffledBoard.Count);
-               
+
                 int maxLoop = 0;
                 while (MatchesAtBoard(i, j, shuffledBoard[tileToUse]) && maxLoop < 100)
                 {
@@ -475,7 +434,7 @@ public class Board : MonoBehaviour
 
 
 
-    #endregion
+ 
 
     #region Corountines
     private IEnumerator FallRowGems()
@@ -517,8 +476,6 @@ public class Board : MonoBehaviour
         yield return new WaitForSeconds(refillTime);
         if (isDeadLocked())
         {
-            Debug.Log("travou tudo aqui meu");
-
 
             ShuffleGems();
         }
