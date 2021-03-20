@@ -104,7 +104,7 @@ MonoBehaviour:
   targetX: 0
   targetY: 0
   isMatched: 0
-  checkMatchTimer: 0.5
+  checkMatchTimer: 0.4
   canMoveTime: 0.5
   isColumnBomb: 0
   isRowBomb: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   swipeAngle: 0
   swipeDiff: 1
   offsetMove: 0
+  smoothLerp: 0.6
   color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!61 &7360476258890330515
 BoxCollider2D:

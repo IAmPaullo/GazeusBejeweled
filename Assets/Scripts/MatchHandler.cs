@@ -9,7 +9,7 @@ public class MatchHandler : MonoBehaviour
     private Board board;
     public List<GameObject> currentMatches = new List<GameObject>();
 
-    
+
     void Start()
     {
         board = FindObjectOfType<Board>();
@@ -100,7 +100,7 @@ public class MatchHandler : MonoBehaviour
                         {
                             GemManager _rightGem = rightGem.GetComponent<GemManager>();
                             GemManager _leftGem = leftGem.GetComponent<GemManager>();
-                            if (leftGem.tag == currentGem.tag && rightGem.tag == currentGem.tag)
+                            if (leftGem.CompareTag(currentGem.tag) && rightGem.CompareTag(currentGem.tag))
                             {
 
                                 currentMatches.Union(IsRowBomb(_leftGem, _currentGemPiece, _rightGem));
@@ -126,7 +126,7 @@ public class MatchHandler : MonoBehaviour
                         {
                             GemManager _downGemPiece = downGem.GetComponent<GemManager>();
                             GemManager _upGemPiece = upGem.GetComponent<GemManager>();
-                            if (upGem.tag == currentGem.tag && downGem.tag == currentGem.tag)
+                            if (upGem.CompareTag(currentGem.tag) && downGem.CompareTag(currentGem.tag))
                             {
 
                                 currentMatches.Union(IsColumnBomb(_upGemPiece, _currentGemPiece, _downGemPiece));
@@ -150,13 +150,13 @@ public class MatchHandler : MonoBehaviour
         {
             for (int j = 0; j < board.height; j++)
             {
-                
+
                 if (board.allGems[i, j] != null)
                 {
-                    
+
                     if (board.allGems[i, j].tag == color)
                     {
-                        
+
                         board.allGems[i, j].GetComponent<GemManager>().isMatched = true;
                     }
                 }
@@ -225,15 +225,15 @@ public class MatchHandler : MonoBehaviour
 
     public void CheckBombs()
     {
-       
+
         if (board.selectedGem != null)
         {
-            
+
             if (board.selectedGem.isMatched)
             {
-                
+
                 board.selectedGem.isMatched = false;
-                
+
                 if ((board.selectedGem.swipeAngle > -45 && board.selectedGem.swipeAngle <= 45)
                    || (board.selectedGem.swipeAngle < -135 || board.selectedGem.swipeAngle >= 135))
                 {
@@ -244,16 +244,16 @@ public class MatchHandler : MonoBehaviour
                     board.selectedGem.ColumnBombSpawner();
                 }
             }
-            
+
             else if (board.selectedGem.sideGem != null)
             {
                 GemManager sideGem = board.selectedGem.sideGem.GetComponent<GemManager>();
-                
+
                 if (sideGem.isMatched)
                 {
-                    
+
                     sideGem.isMatched = false;
-                   
+
                     if ((board.selectedGem.swipeAngle > -45 && board.selectedGem.swipeAngle <= 45)
                    || (board.selectedGem.swipeAngle < -135 || board.selectedGem.swipeAngle >= 135))
                     {

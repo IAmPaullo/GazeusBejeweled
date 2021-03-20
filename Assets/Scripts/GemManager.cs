@@ -29,14 +29,14 @@ public class GemManager : MonoBehaviour
     private MatchHandler matchHandler;
     private Board board;
     public GameObject sideGem;
-    private Vector2 frstTchPstn;
-    private Vector2 lstTchPstn;
-    private Vector2 tmpPstn;
+    private Vector2 firstTouchPosition;
+    private Vector2 lastTouchPos;
+    private Vector2 tempPos;
     [Space(10)]
     public float swipeAngle;
     public float swipeDiff = 1f;
     public float offsetMove;
-
+    [SerializeField] float smoothLerp =.6f;
     public Color color;
 
 
@@ -69,8 +69,8 @@ public class GemManager : MonoBehaviour
         targetY = row;
         if (Mathf.Abs(targetX - transform.position.x) > .1f)
         {
-            tmpPstn = new Vector2(targetX, transform.position.y);
-            transform.position = Vector2.Lerp(transform.position, tmpPstn, .6f);
+            tempPos = new Vector2(targetX, transform.position.y);
+            transform.position = Vector2.Lerp(transform.position, tempPos, smoothLerp);
             if (board.allGems[column, row] != this.gameObject)
             {
                 board.allGems[column, row] = this.gameObject;
@@ -80,15 +80,15 @@ public class GemManager : MonoBehaviour
         }
         else
         {
-            tmpPstn = new Vector2(targetX, transform.position.y);
-            transform.position = tmpPstn;
+            tempPos = new Vector2(targetX, transform.position.y);
+            transform.position = tempPos;
 
         }
 
         if (Mathf.Abs(targetY - transform.position.y) > .1f)
         {
-            tmpPstn = new Vector2(transform.position.x, targetY);
-            transform.position = Vector2.Lerp(transform.position, tmpPstn, .6f);
+            tempPos = new Vector2(transform.position.x, targetY);
+            transform.position = Vector2.Lerp(transform.position, tempPos, smoothLerp);
             if (board.allGems[column, row] != this.gameObject)
             {
                 board.allGems[column, row] = this.gameObject;
@@ -99,8 +99,8 @@ public class GemManager : MonoBehaviour
         }
         else
         {
-            tmpPstn = new Vector2(transform.position.x, targetY);
-            transform.position = tmpPstn;
+            tempPos = new Vector2(transform.position.x, targetY);
+            transform.position = tempPos;
 
         }
     }
@@ -109,7 +109,7 @@ public class GemManager : MonoBehaviour
     {
         if (board.currentState == GameStates.move)
         {
-            frstTchPstn = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            firstTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 
@@ -118,7 +118,7 @@ public class GemManager : MonoBehaviour
     {
         if (board.currentState == GameStates.move)
         {
-            lstTchPstn = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            lastTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             CalculateSwipeAngle();
         }
 
@@ -129,7 +129,7 @@ public class GemManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            //isColumnBomb = true;
+            ColorBombSpawner();
             //this.gameObject.GetComponent<SpriteRenderer>().color = color;
             //GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity, this.gameObject.transform);
             //board.allGems[column, row].tag = "Color Bomb";
@@ -138,11 +138,11 @@ public class GemManager : MonoBehaviour
     }
     void CalculateSwipeAngle()
     {
-        if (Mathf.Abs(lstTchPstn.y - frstTchPstn.y) > swipeDiff || Mathf.Abs(lstTchPstn.x - frstTchPstn.x) > swipeDiff)
+        if (Mathf.Abs(lastTouchPos.y - firstTouchPosition.y) > swipeDiff || Mathf.Abs(lastTouchPos.x - firstTouchPosition.x) > swipeDiff)
         {
             //angulo da direção que foi arrastado
-            swipeAngle = Mathf.Atan2(lstTchPstn.y - frstTchPstn.y, lstTchPstn.x - frstTchPstn.x) * 180 / Mathf.PI;
-            MoveGems();
+            swipeAngle = Mathf.Atan2(lastTouchPos.y - firstTouchPosition.y, lastTouchPos.x - firstTouchPosition.x) * 180 / Mathf.PI;
+            CalculateGemMove();
             board.selectedGem = this;
 
             //if (sideGem != null)
@@ -163,7 +163,7 @@ public class GemManager : MonoBehaviour
     }
 
 
-    void MoveGems2_0(Vector2 dir)
+    void MoveGem(Vector2 dir)
     {
         sideGem = board.allGems[column + (int)dir.x, row + (int)dir.y];
         prevRow = row;
@@ -186,69 +186,34 @@ public class GemManager : MonoBehaviour
     }
 
 
-    void MoveGems()
+    void CalculateGemMove()
     {
 
         if (swipeAngle > -45 && swipeAngle <= 45 && column < board.width - 1)
         {
-            MoveGems2_0(Vector2.right);
+            MoveGem(Vector2.right);
         }
         else if ((swipeAngle > 135 || swipeAngle <= -135) && column > 0)
         {
-            MoveGems2_0(Vector2.left);
+            MoveGem(Vector2.left);
         }
         else if (swipeAngle > 45 && swipeAngle <= 135 && row < board.height - 1)
         {
-            MoveGems2_0(Vector2.up);
+            MoveGem(Vector2.up);
         }
         else if (swipeAngle < -45 && swipeAngle >= -135 && row > 0)
         {
-            MoveGems2_0(Vector2.down);
+            MoveGem(Vector2.down);
         }
         else
         {
             board.currentState = GameStates.move;
         }
-        //StartCoroutine(CheckMovePossibilities());
+        
     }
 
 
-    void DetectMatch()
-    {
-        //Detecção Horizontal
-        if (column > 0 && column < board.width - 1)
-        {
-            GameObject leftGem1 = board.allGems[column - 1, row];
-            GameObject rightGem1 = board.allGems[column + 1, row];
-            if (leftGem1 != null && rightGem1 != null)
-            {
-                if (leftGem1.tag == this.gameObject.tag && rightGem1.tag == this.gameObject.tag)
-                {
-                    leftGem1.GetComponent<GemManager>().isMatched = true;
-                    rightGem1.GetComponent<GemManager>().isMatched = true;
-                    isMatched = true;
-                }
-
-            }
-
-        }
-
-        //Detecção Vertical
-        if (row > 0 && row < board.height - 1)
-        {
-            GameObject upGem1 = board.allGems[column, row + 1];
-            GameObject downGem1 = board.allGems[column, row - 1];
-            if (upGem1 != null && downGem1 != null)
-            {
-                if (upGem1.tag == this.gameObject.tag && downGem1.gameObject.tag == this.gameObject.tag)
-                {
-                    upGem1.GetComponent<GemManager>().isMatched = true;
-                    downGem1.GetComponent<GemManager>().isMatched = true;
-                    isMatched = true;
-                }
-            }
-        }
-    }
+   
 
     void ChangeColor()
     {
@@ -266,21 +231,16 @@ public class GemManager : MonoBehaviour
         isRowBomb = true;
         this.gameObject.GetComponent<SpriteRenderer>().color = color;
         
-        // this.gameObject.GetComponent<Animator>().enabled = true;
-        //this.gameObject.GetComponent<Animator>().Play("blue_flash");
-        //board.selectedGem.GetComponent<Animation>().Play("blue_flash");
-        //MakeLineBomb();
+        
     }
 
     public void ColumnBombSpawner()
     {
         isColumnBomb = true;
         this.gameObject.GetComponent<SpriteRenderer>().color = color;
+        Debug.Log("boi");
         
-        //this.gameObject.GetComponent<Animator>().enabled = true;
-        //this.gameObject.GetComponent<Animator>().Play("blue_column");
-        //board.selectedGem.GetComponent<Animation>().Play("blue_flash");
-        //MakeLineBomb();
+        
     }
 
     public void ColorBombSpawner()
@@ -321,7 +281,7 @@ public class GemManager : MonoBehaviour
             {
                 board.DestroyActualMatches();
             }
-            //sideGem = null;
+            
         }
 
     }
