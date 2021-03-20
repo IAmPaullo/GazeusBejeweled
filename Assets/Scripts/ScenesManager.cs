@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ScenesManager : MonoBehaviour
 {
     
-    public GameObject canvasPanel;
+    [SerializeField] GameObject canvasPanel;
     [SerializeField] GameObject winPanel;
     [SerializeField] GameObject timeOutPanel;
     [SerializeField] Animator anim;

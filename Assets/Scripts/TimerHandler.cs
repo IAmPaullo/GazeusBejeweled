@@ -16,17 +16,14 @@ public class TimerHandler : MonoBehaviour
 
     void Start()
     {
-        //sceneManager = FindObjectOfType<ScenesManager>();
+        
         fillImage.fillAmount = 1f;
         StartCoroutine(CountDown(duration));
     }
 
     private void Update()
     {
-
         OutOfTime();
-
-
     }
 
     public IEnumerator CountDown(float duration)

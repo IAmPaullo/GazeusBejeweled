@@ -5,9 +5,9 @@ using UnityEngine;
 public class CameraReSizer : MonoBehaviour
 {
     private Board board;
-    public float cameraOffset;
-    public float aspectRatio = 0.625f;
-    public float padding = 2f;
+    [SerializeField] float cameraOffset;
+    [SerializeField] float aspectRatio = 0.625f;
+    [SerializeField] float padding = 2f;
 
 
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ProgressBarHandler : MonoBehaviour
 {
     [SerializeField] Image progressBar;
-    public float value;
+    [SerializeField] float value;
     private float maxValue;
     [SerializeField] float levelGoal;
     [SerializeField] GameObject finishFX;
