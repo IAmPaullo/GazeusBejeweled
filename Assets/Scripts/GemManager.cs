@@ -131,7 +131,7 @@ public class GemManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            RowBombSpawner();
+            ColorBombSpawner();
             //this.gameObject.GetComponent<SpriteRenderer>().color = color;
             //GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity, this.gameObject.transform);
             //board.allGems[column, row].tag = "Color Bomb";

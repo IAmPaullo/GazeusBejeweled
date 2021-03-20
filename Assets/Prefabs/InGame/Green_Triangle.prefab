@@ -111,6 +111,7 @@ MonoBehaviour:
   isColorBomb: 0
   colorBomb: {fileID: 4344708415865627744, guid: 2a14768fcdbe413448d9bf2dd0722d1b,
     type: 3}
+  anim: {fileID: 1853023032847596883}
   sideGem: {fileID: 0}
   swipeAngle: 0
   swipeDiff: 1
@@ -151,9 +152,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2889890171818194786}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4f2e34282d9aa34298784a13df560ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6db4c377a8014854aa202d5926b48f61, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

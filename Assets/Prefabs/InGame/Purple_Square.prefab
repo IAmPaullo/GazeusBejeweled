@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4374095007482185292}
   - component: {fileID: -7127467386621081107}
   - component: {fileID: 5948098046397779744}
+  - component: {fileID: 8243460292715907757}
   m_Layer: 0
   m_Name: Purple_Square
   m_TagString: Purple
@@ -136,9 +137,29 @@ MonoBehaviour:
   isColorBomb: 0
   colorBomb: {fileID: 4344708415865627744, guid: 2a14768fcdbe413448d9bf2dd0722d1b,
     type: 3}
+  anim: {fileID: 8243460292715907757}
   sideGem: {fileID: 0}
   swipeAngle: 0
   swipeDiff: 1
   offsetMove: 0
   smoothLerp: 0.6
   color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!95 &8243460292715907757
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913579700810535344}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6db4c377a8014854aa202d5926b48f61, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
