@@ -9754,19 +9754,19 @@ MonoBehaviour:
   slideOffset: 20
   fallTime: 0.3
   refillTime: 0.5
-  tilePrefab: {fileID: 6024788507561549505, guid: 7e2ea79e12e48ad44bff064f8b9179e9,
-    type: 3}
   gems:
   - {fileID: 1866082592458488333, guid: 6dc3c2b6753d6974b83abb2e8207f299, type: 3}
   - {fileID: 2889890171818194786, guid: d3b237c7a5ee1b546aac7fd5799b5570, type: 3}
   - {fileID: 1201142854907456410, guid: 7c584ea4ce370fd4f9d5091bf0cad420, type: 3}
   - {fileID: 8646125056632562528, guid: 9b7e6f406a267a74d9693f950857fe37, type: 3}
   - {fileID: 1913579700810535344, guid: a01998eee9d8b604db0c115315b9a45f, type: 3}
+  tilePrefab: {fileID: 6024788507561549505, guid: 7e2ea79e12e48ad44bff064f8b9179e9,
+    type: 3}
   destroyFX: {fileID: 2500809861846031090, guid: 01e33c54122e8f746a721f9172c2f3be,
     type: 3}
   selectedGem: {fileID: 0}
-  animator: {fileID: 0}
   baseGemValue: 10
+  streakValue: 1
 --- !u!4 &312203001
 Transform:
   m_ObjectHideFlags: 0
@@ -10090,6 +10090,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1326816765, guid: 6f4d03dcddb214a4fadca8d3ae12702c, type: 3}
+      propertyPath: levelGoal
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5029020008016819893, guid: 6f4d03dcddb214a4fadca8d3ae12702c,
         type: 3}
       propertyPath: m_Name
