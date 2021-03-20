@@ -23,6 +23,7 @@ public class GemManager : MonoBehaviour
     public bool isRowBomb;
     public bool isColorBomb;
     public GameObject colorBomb;
+    public Animator anim;
 
 
 
@@ -44,6 +45,7 @@ public class GemManager : MonoBehaviour
 
     void Start()
     {
+        
         matchHandler = FindObjectOfType<MatchHandler>();
         board = FindObjectOfType<Board>();
         isColumnBomb = false;
@@ -129,7 +131,7 @@ public class GemManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            ColorBombSpawner();
+            RowBombSpawner();
             //this.gameObject.GetComponent<SpriteRenderer>().color = color;
             //GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity, this.gameObject.transform);
             //board.allGems[column, row].tag = "Color Bomb";
@@ -229,7 +231,8 @@ public class GemManager : MonoBehaviour
     public void RowBombSpawner()
     {
         isRowBomb = true;
-        this.gameObject.GetComponent<SpriteRenderer>().color = color;
+        anim.SetBool("IsRowBomb", true);
+        
         
         
     }
@@ -237,8 +240,8 @@ public class GemManager : MonoBehaviour
     public void ColumnBombSpawner()
     {
         isColumnBomb = true;
-        this.gameObject.GetComponent<SpriteRenderer>().color = color;
-        Debug.Log("boi");
+        anim.SetBool("IsColumnBomb", true);
+        
         
         
     }
@@ -246,7 +249,8 @@ public class GemManager : MonoBehaviour
     public void ColorBombSpawner()
     {
         isColorBomb = true;
-        GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity, this.gameObject.transform);
+        anim.SetBool("IsColorBomb", true);
+       
     }
 
     public IEnumerator CheckMovePossibilities()
