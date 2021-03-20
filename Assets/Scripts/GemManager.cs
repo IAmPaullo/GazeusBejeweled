@@ -7,23 +7,22 @@ public class GemManager : MonoBehaviour
     [Header("Variaveis do Board")]
     public int column;
     public int row;
-    public int prevColumn;
-    public int prevRow;
-    public int targetX;
-    public int targetY;
+    private int prevColumn;
+    private int prevRow;
+    private int targetX;
+    private int targetY;
     public bool isMatched;
     [Space(20)]
     [Tooltip("Tempo pra verificar se foi possível o match")]
-    public float checkMatchTimer = .5f;
-    public float canMoveTime = .5f;
+    [SerializeField] float checkMatchTimer = .4f;
+    [SerializeField] float canMoveTime = .5f;
     [Space(10)]
 
     [Header("Power Ups")]
     public bool isColumnBomb;
     public bool isRowBomb;
     public bool isColorBomb;
-    public GameObject colorBomb;
-    public Animator anim;
+    [SerializeField] Animator anim;
 
 
 
@@ -35,17 +34,16 @@ public class GemManager : MonoBehaviour
     private Vector2 tempPos;
     [Space(10)]
     public float swipeAngle;
-    public float swipeDiff = 1f;
-    public float offsetMove;
-    [SerializeField] float smoothLerp =.6f;
-    public Color color;
+    [SerializeField] float swipeDiff = 1f;
+    [SerializeField] float offsetMove;
+    [SerializeField] float smoothLerp = .6f;
 
 
 
 
     void Start()
     {
-        
+
         matchHandler = FindObjectOfType<MatchHandler>();
         board = FindObjectOfType<Board>();
         isColumnBomb = false;
@@ -58,9 +56,6 @@ public class GemManager : MonoBehaviour
 
     void Update()
     {
-
-
-        //ChangeColor();
         GeneralMove();
     }
 
@@ -107,6 +102,7 @@ public class GemManager : MonoBehaviour
         }
     }
 
+
     private void OnMouseDown()
     {
         if (board.currentState == GameStates.move)
@@ -126,42 +122,24 @@ public class GemManager : MonoBehaviour
 
     }
 
-
-    private void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            ColorBombSpawner();
-            //this.gameObject.GetComponent<SpriteRenderer>().color = color;
-            //GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity, this.gameObject.transform);
-            //board.allGems[column, row].tag = "Color Bomb";
-            //this.gameObject.GetComponent<SpriteRenderer>().material = colorMaterial;
-        }
-    }
     void CalculateSwipeAngle()
     {
         if (Mathf.Abs(lastTouchPos.y - firstTouchPosition.y) > swipeDiff || Mathf.Abs(lastTouchPos.x - firstTouchPosition.x) > swipeDiff)
         {
-            //angulo da direção que foi arrastado
+
             swipeAngle = Mathf.Atan2(lastTouchPos.y - firstTouchPosition.y, lastTouchPos.x - firstTouchPosition.x) * 180 / Mathf.PI;
             CalculateGemMove();
             board.selectedGem = this;
 
-            //if (sideGem != null)
-
-            //{
-            //    board.currentState = GameStates.wait;
-            //}
-            //board.selectedGem = this;
         }
         else
         {
 
             board.currentState = GameStates.move;
         }
-        
 
-        
+
+
     }
 
 
@@ -170,7 +148,7 @@ public class GemManager : MonoBehaviour
         sideGem = board.allGems[column + (int)dir.x, row + (int)dir.y];
         prevRow = row;
         prevColumn = column;
-        if(sideGem != null)
+        if (sideGem != null)
         {
             sideGem.GetComponent<GemManager>().column += -1 * (int)dir.x;
             sideGem.GetComponent<GemManager>().row += -1 * (int)dir.y;
@@ -183,8 +161,8 @@ public class GemManager : MonoBehaviour
         {
             board.currentState = GameStates.move;
         }
-        
-        
+
+
     }
 
 
@@ -211,20 +189,13 @@ public class GemManager : MonoBehaviour
         {
             board.currentState = GameStates.move;
         }
-        
+
     }
 
 
-   
 
-    void ChangeColor()
-    {
-        if (isMatched)
-        {
-            SpriteRenderer gemSprite = GetComponent<SpriteRenderer>();
-            gemSprite.color = new Color(1, 1, 1, .2f);
-        }
-    }
+
+
 
 
 
@@ -232,26 +203,21 @@ public class GemManager : MonoBehaviour
     {
         isRowBomb = true;
         anim.SetBool("IsRowBomb", true);
-        
-        
-        
     }
 
     public void ColumnBombSpawner()
     {
         isColumnBomb = true;
         anim.SetBool("IsColumnBomb", true);
-        
-        
-        
     }
 
     public void ColorBombSpawner()
     {
         isColorBomb = true;
         anim.SetBool("IsColorBomb", true);
-       
     }
+
+
 
     public IEnumerator CheckMovePossibilities()
     {
@@ -260,7 +226,8 @@ public class GemManager : MonoBehaviour
             matchHandler.MatchPiecesOfColor(sideGem.tag);
             isMatched = true;
 
-        }else if(sideGem != null)
+        }
+        else if (sideGem != null)
         {
             if (sideGem.GetComponent<GemManager>().isColorBomb)
             {
@@ -285,7 +252,6 @@ public class GemManager : MonoBehaviour
             {
                 board.DestroyActualMatches();
             }
-            
         }
 
     }
