@@ -164,25 +164,7 @@ public class MatchHandler : MonoBehaviour
         }
     }
 
-    List<GameObject> GetAdjacentPieces(int column, int row)
-    {
-        List<GameObject> gems = new List<GameObject>();
-        for (int i = column - 1; i <= column + 1; i++)
-        {
-            for (int j = row - 1; j <= row + 1; j++)
-            {
-                if (i >= 0 && i < board.width && j >= 0 && j < board.height)
-                {
-                    if (board.allGems[i, j] != null)
-                    {
-                        gems.Add(board.allGems[i, j]);
-                        board.allGems[i, j].GetComponent<GemManager>().isMatched = true;
-                    }
-                }
-            }
-        }
-        return gems;
-    }
+  
 
     List<GameObject> GetColumnPieces(int column)
     {
